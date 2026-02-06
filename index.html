@@ -83,6 +83,16 @@
         break-inside: avoid;
         margin-bottom: 1.5rem;
       }
+
+      /* Fix for GLightbox whitespace issues */
+      .glightbox-clean .gslide-media {
+        box-shadow: none !important;
+        background: transparent !important;
+      }
+
+      .glightbox-container .gslide-image img {
+         max-width: 100vw;
+      }
     </style>
   </head>
 
@@ -719,79 +729,125 @@
         </div>
       </div>
     </section>
-    <section class="py-16 md:py-24 px-4 md:px-10 lg:px-20 bg-navy relative overflow-hidden">
-      <div class="absolute inset-0 opacity-5 pointer-events-none"
-        style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
-      <div class="max-w-7xl mx-auto relative z-10">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-          <div>
-            <span class="text-blue-400 font-bold uppercase tracking-wider text-sm mb-2 block">Client Trust</span>
-            <h2 class="text-white text-4xl font-bold">Hear From Our Partners</h2>
-          </div>
-          <div class="flex gap-2">
-            <button class="size-10 rounded-full border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-navy transition"><span
-                class="material-symbols-outlined">arrow_back</span></button>
-            <button class="size-10 rounded-full bg-white text-navy flex items-center justify-center hover:bg-gray-200 transition"><span class="material-symbols-outlined">arrow_forward</span></button>
-          </div>
+    <section class="py-24 px-4 md:px-10 lg:px-20 bg-gray-50 relative">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-navy text-4xl md:text-5xl font-bold mb-4 tracking-tight">Hear From Our Partners</h2>
+          <p class="text-gray-500 text-lg md:text-xl font-medium">Trusted by companies worldwide</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-[#1f3152] p-8 rounded border border-white/5 shadow-2xl relative">
-          <div class="bg-[#1f3152] p-8 rounded border border-white/5 shadow-2xl relative">
-            <span class="material-symbols-outlined text-6xl text-white/5 absolute top-4 right-4">format_quote</span>
-            <div class="flex gap-1 text-amber-400 mb-6">
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-            </div>
-            <p class="text-gray-300 italic mb-8 leading-relaxed">"The PUFF Panels team demonstrated exceptional professionalism. The warehouse was completed two weeks ahead of schedule, significantly
-              aiding our logistics rollout."</p>
-            <div class="flex items-center gap-4 pt-6 border-t border-white/10">
-              <div class="size-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">JD</div>
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100 flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80" alt="John Davis" class="size-14 rounded-full object-cover shadow-sm" />
               <div>
-                <h4 class="text-white font-bold">John Davis</h4>
-                <p class="text-blue-200 text-xs uppercase tracking-wider">Project Mgr, ABC Corp</p>
+                <h4 class="text-navy font-bold text-lg leading-tight">John Davis</h4>
+                <p class="text-gray-400 text-sm font-medium">Project Mgr, ABC Corp</p>
               </div>
             </div>
+            <div class="flex gap-1 text-amber-400 mb-4">
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+            </div>
+            <p class="text-gray-600 leading-relaxed flex-grow">"The PUFF Panels team demonstrated exceptional professionalism. The warehouse was completed two weeks ahead of schedule, significantly aiding our logistics rollout."</p>
           </div>
-          <div class="bg-[#1f3152] p-8 rounded border border-white/5 shadow-2xl relative">
-            <span class="material-symbols-outlined text-6xl text-white/5 absolute top-4 right-4">format_quote</span>
-            <div class="flex gap-1 text-amber-400 mb-6">
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-            </div>
-            <p class="text-gray-300 italic mb-8 leading-relaxed">"We saw a 30% drop in energy costs within the first quarter. The thermal efficiency of these panels is exactly as advertised. Highly
-              recommended."</p>
-            <div class="flex items-center gap-4 pt-6 border-t border-white/10">
-              <div class="size-12 rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">SM</div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100 flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Sarah Miller" class="size-14 rounded-full object-cover shadow-sm" />
               <div>
-                <h4 class="text-white font-bold">Sarah Miller</h4>
-                <p class="text-blue-200 text-xs uppercase tracking-wider">Director, FreshFoods</p>
+                <h4 class="text-navy font-bold text-lg leading-tight">Sarah Miller</h4>
+                <p class="text-gray-400 text-sm font-medium">Director, FreshFoods</p>
               </div>
             </div>
+            <div class="flex gap-1 text-amber-400 mb-4">
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+            </div>
+            <p class="text-gray-600 leading-relaxed flex-grow">"We saw a 30% drop in energy costs within the first quarter. The thermal efficiency of these panels is exactly as advertised. Highly recommended."</p>
           </div>
-          <div class="bg-[#1f3152] p-8 rounded border border-white/5 shadow-2xl relative hidden lg:block">
-            <span class="material-symbols-outlined text-6xl text-white/5 absolute top-4 right-4">format_quote</span>
-            <div class="flex gap-1 text-amber-400 mb-6">
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-            </div>
-            <p class="text-gray-300 italic mb-8 leading-relaxed">"Robust materials that withstand our industrial environment perfectly. The aesthetics are also a major upgrade from traditional
-              cladding."</p>
-            <div class="flex items-center gap-4 pt-6 border-t border-white/10">
-              <div class="size-12 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">MK</div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100 flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80" alt="Mike K." class="size-14 rounded-full object-cover shadow-sm" />
               <div>
-                <h4 class="text-white font-bold">Mike K.</h4>
-                <p class="text-blue-200 text-xs uppercase tracking-wider">Site Supervisor</p>
+                <h4 class="text-navy font-bold text-lg leading-tight">Mike K.</h4>
+                <p class="text-gray-400 text-sm font-medium">Site Supervisor, BuildRight</p>
               </div>
             </div>
+            <div class="flex gap-1 text-amber-400 mb-4">
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+            </div>
+            <p class="text-gray-600 leading-relaxed flex-grow">"Robust materials that withstand our industrial environment perfectly. The aesthetics are also a major upgrade from traditional cladding systems."</p>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100 flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80" alt="David Chen" class="size-14 rounded-full object-cover shadow-sm" />
+              <div>
+                <h4 class="text-navy font-bold text-lg leading-tight">David Chen</h4>
+                <p class="text-gray-400 text-sm font-medium">CTO, TechSpace</p>
+              </div>
+            </div>
+            <div class="flex gap-1 text-amber-400 mb-4">
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+            </div>
+            <p class="text-gray-600 leading-relaxed flex-grow">"The modular office solution allowed us to scale our campus rapidly without compromising on sound insulation or build quality. Exceptional work."</p>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100 flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80" alt="Emily Rodriguez" class="size-14 rounded-full object-cover shadow-sm" />
+              <div>
+                <h4 class="text-navy font-bold text-lg leading-tight">Emily Rodriguez</h4>
+                <p class="text-gray-400 text-sm font-medium">Ops Head, CoolLogistics</p>
+              </div>
+            </div>
+            <div class="flex gap-1 text-amber-400 mb-4">
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+            </div>
+            <p class="text-gray-600 leading-relaxed flex-grow">"Their fire-rated panels gave us peace of mind for our chemical storage facility. The certification process was smooth thanks to their documentation."</p>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100 flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Robert Fox" class="size-14 rounded-full object-cover shadow-sm" />
+              <div>
+                <h4 class="text-navy font-bold text-lg leading-tight">Robert Fox</h4>
+                <p class="text-gray-400 text-sm font-medium">Founder, GreenHomes</p>
+              </div>
+            </div>
+            <div class="flex gap-1 text-amber-400 mb-4">
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+            </div>
+            <p class="text-gray-600 leading-relaxed flex-grow">"A perfect blend of sustainability and structural strength. PUFF Panels helped us achieve our LEED certification goals for the new eco-park."</p>
           </div>
         </div>
       </div>
