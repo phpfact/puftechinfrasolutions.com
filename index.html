@@ -1,968 +1,1833 @@
 <!DOCTYPE html>
-<html class="light"
-  lang="en">
+<html class="light overflow-x-hidden" lang="en">
 
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0"
-      name="viewport" />
-    <title>Premium PUFF Panel Construction Home</title>
-    <link href="https://fonts.googleapis.com"
-      rel="preconnect" />
-    <link crossorigin=""
-      href="https://fonts.gstatic.com"
-      rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
-      rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "navy": "#152543",
-              "charcoal": "#38393d",
-              "off-white": "#fefefe",
-              "light-gray": "#f3f4f6",
-            },
-            fontFamily: {
-              "sans": ["Manrope", "sans-serif"]
-            },
-            backgroundImage: {
-              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-            }
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Premium PUFF Panel Construction Home</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "navy": "#152543",
+            "charcoal": "#38393d",
+            "off-white": "#fefefe",
+            "light-gray": "#f3f4f6",
           },
+          fontFamily: {
+            "sans": ["Manrope", "sans-serif"]
+          },
+          backgroundImage: {
+            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+          }
         },
-      }
-    </script>
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
+      },
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
 
-      ::-webkit-scrollbar-track {
-        background: #fefefe;
-      }
+    ::-webkit-scrollbar-track {
+      background: #fefefe;
+    }
 
-      ::-webkit-scrollbar-thumb {
-        background: #cbd5e1;
-        border-radius: 3px;
-      }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 3px;
+    }
 
-      ::-webkit-scrollbar-thumb:hover {
-        background: #94a3b8;
-      }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
 
+    .masonry-grid {
+      column-count: 1;
+      column-gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
       .masonry-grid {
-        column-count: 1;
-        column-gap: 1.5rem;
+        column-count: 2;
       }
+    }
 
-      @media (min-width: 640px) {
-        .masonry-grid {
-          column-count: 2;
-        }
+    @media (min-width: 1024px) {
+      .masonry-grid {
+        column-count: 3;
       }
+    }
 
-      @media (min-width: 1024px) {
-        .masonry-grid {
-          column-count: 3;
-        }
-      }
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 1.5rem;
+    }
 
-      .masonry-item {
-        break-inside: avoid;
-        margin-bottom: 1.5rem;
-      }
-    </style>
-  </head>
+    /* Fix for GLightbox whitespace issues */
+    .glightbox-clean .gslide-media {
+      box-shadow: none !important;
+      background: transparent !important;
+    }
 
-  <body class="font-sans bg-off-white text-charcoal antialiased overflow-x-hidden selection:bg-navy selection:text-white">
-    <div class="bg-navy text-white text-xs font-medium py-2 px-4 md:px-10 lg:px-20 border-b border-white/10">
-      <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <div class="flex items-center gap-6">
-          <span class="flex items-center gap-2 opacity-80"><span class="material-symbols-outlined text-sm">schedule</span> Mon - Sat: 8AM - 7PM</span>
-          <span class="hidden sm:flex items-center gap-2 opacity-80"><span class="material-symbols-outlined text-sm">location_on</span> New York, USA</span>
-        </div>
-        <div class="flex items-center gap-6">
-          <a class="hover:text-blue-200 transition-colors flex items-center gap-2"
-            href="mailto:contact@puffpanels.com"><span class="material-symbols-outlined text-sm">mail</span> contact@puffpanels.com</a>
-          <div class="h-3 w-px bg-white/20"></div>
-          <div class="flex gap-3">
-            <a class="hover:text-blue-200 transition"
-              href="#"><i class="text-xs">FB</i></a>
-            <a class="hover:text-blue-200 transition"
-              href="#"><i class="text-xs">IN</i></a>
-            <a class="hover:text-blue-200 transition"
-              href="#"><i class="text-xs">TW</i></a>
-          </div>
+    .glightbox-container .gslide-image img {
+      max-width: 100vw;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .gslide-image {
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-off-white text-charcoal antialiased overflow-x-hidden selection:bg-navy selection:text-white">
+  <div class="bg-navy text-white text-xs font-medium py-2 px-4 md:px-10 lg:px-20 border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-between items-center gap-y-2">
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-2 opacity-80"><span class="material-symbols-outlined text-sm">schedule</span>
+          Mon-Sat: 9:00 AM - 6:00 PM</span>
+        <span class="hidden sm:flex items-center gap-2 opacity-80"><span
+            class="material-symbols-outlined text-sm">location_on</span> Haryana, India</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a class="hover:text-blue-200 transition-colors flex items-center gap-2"
+          href="mailto:puftechinfrasolutions@gmail.com"><span class="material-symbols-outlined text-sm">mail</span>
+          puftechinfrasolutions@gmail.com</a>
+        <div class="h-3 w-px bg-white/20"></div>
+        <div class="flex gap-3">
+          <a class="hover:text-blue-200 transition" href="#"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+          <a class="hover:text-blue-200 transition" href="#"><i class="fa-brands fa-instagram text-xs"></i></a>
+          <a class="hover:text-blue-200 transition" href="#"><i class="fa-brands fa-twitter text-xs"></i></a>
         </div>
       </div>
     </div>
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
-      <div class="px-4 md:px-10 lg:px-20">
-        <div class="max-w-7xl mx-auto flex h-20 items-center justify-between">
-          <a class="flex items-center gap-3 group"
-            href="#">
-            <div class="size-10 bg-navy text-white flex items-center justify-center rounded-sm shadow-md group-hover:bg-charcoal transition-colors">
-              <span class="material-symbols-outlined text-2xl">grid_view</span>
-            </div>
-            <div class="flex flex-col">
-              <h2 class="text-xl font-bold tracking-tight text-navy leading-none">PUFF<span class="font-light">PANELS</span></h2>
-              <span class="text-[10px] uppercase tracking-[0.2em] text-charcoal font-semibold">Construction</span>
-            </div>
-          </a>
-          <div class="hidden lg:flex items-center gap-10">
-            <nav class="flex items-center gap-8">
-              <a class="text-sm font-bold text-navy hover:text-blue-600 transition-colors"
-                href="#">Home</a>
-              <a class="text-sm font-medium text-gray-600 hover:text-navy transition-colors"
-                href="#projects">Projects</a>
-              <a class="text-sm font-medium text-gray-600 hover:text-navy transition-colors"
-                href="#process">Process</a>
-              <a class="text-sm font-medium text-gray-600 hover:text-navy transition-colors"
-                href="#gallery">Gallery</a>
-              <a class="text-sm font-medium text-gray-600 hover:text-navy transition-colors"
-                href="#contact">Contact</a>
-            </nav>
-            <div class="h-6 w-px bg-gray-200"></div>
-            <div class="flex items-center gap-4">
-              <span class="text-navy font-bold text-sm tracking-wide">+1 (800) 123-4567</span>
-              <button class="bg-navy hover:bg-charcoal text-white text-sm font-semibold py-2.5 px-6 rounded shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
-                Get Quote
-              </button>
-            </div>
-          </div>
-          <button id="mobile-menu-btn" class="lg:hidden text-navy">
-            <span class="material-symbols-outlined text-3xl">menu_open</span>
-          </button>
-        </div>
-      </div>
-    </header>
-    <div class="relative w-full h-[85vh] min-h-[600px] overflow-hidden bg-navy group" id="hero_section">
-      <div class="swiper mySwiper h-full w-full">
-        <div class="swiper-wrapper">
-          <!-- Slide 1 -->
-          <div class="swiper-slide relative w-full h-full">
-            <div class="absolute inset-0 z-0">
-              <img alt="Industrial Warehouse Interior"
-                class="w-full h-full object-cover"
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80" />
-              <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/60 to-transparent"></div>
-              <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent"></div>
-            </div>
-            <div class="relative z-10 h-full flex items-center px-4 md:px-10 lg:px-20">
-              <div class="max-w-7xl mx-auto w-full pt-16">
-                <div class="max-w-3xl flex flex-col gap-8">
-                  <div class="flex items-center gap-4">
-                    <div class="h-px w-12 bg-blue-400"></div>
-                    <span class="text-blue-100 text-sm font-bold uppercase tracking-[0.2em]">Premium Industrial Solutions</span>
-                  </div>
-                  <h1 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-lg">
-                    Engineering <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">Excellence</span> <br />
-                    In Every Panel.
-                  </h1>
-                  <p class="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-xl border-l-2 border-blue-500 pl-6">
-                    State-of-the-art PUFF panel construction for next-generation warehouses, cold storage, and commercial infrastructure.
-                  </p>
-                  <div class="flex flex-col sm:flex-row gap-5 mt-4">
-                    <button class="h-14 px-8 rounded bg-white text-navy text-base font-bold hover:bg-gray-100 transition shadow-lg hover:shadow-white/20 flex items-center justify-center gap-2 group/btn">
-                      Explore Our Work
-                      <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                    </button>
-                    <button
-                      class="h-14 px-8 rounded border border-white/30 backdrop-blur-sm text-white text-base font-semibold hover:bg-white/10 hover:border-white transition flex items-center justify-center gap-2">
-                      <span class="material-symbols-outlined text-xl">play_circle</span>
-                      Watch Process
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Slide 2 -->
-          <div class="swiper-slide relative w-full h-full">
-            <div class="absolute inset-0 z-0">
-              <img alt="Global Logistics Hub"
-                class="w-full h-full object-cover"
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80" />
-              <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/60 to-transparent"></div>
-              <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent"></div>
-            </div>
-            <div class="relative z-10 h-full flex items-center px-4 md:px-10 lg:px-20">
-              <div class="max-w-7xl mx-auto w-full pt-16">
-                <div class="max-w-3xl flex flex-col gap-8">
-                  <div class="flex items-center gap-4">
-                    <div class="h-px w-12 bg-blue-400"></div>
-                    <span class="text-blue-100 text-sm font-bold uppercase tracking-[0.2em]">Global Logistics</span>
-                  </div>
-                  <h1 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-lg">
-                    Optimized <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">Distribution</span> <br />
-                    Hubs.
-                  </h1>
-                  <p class="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-xl border-l-2 border-blue-500 pl-6">
-                    Massive scale distribution centers featuring 120mm PUFF panels for optimal temperature regulation.
-                  </p>
-                  <div class="flex flex-col sm:flex-row gap-5 mt-4">
-                    <button class="h-14 px-8 rounded bg-white text-navy text-base font-bold hover:bg-gray-100 transition shadow-lg hover:shadow-white/20 flex items-center justify-center gap-2 group/btn">
-                      View Projects
-                      <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Slide 3 -->
-          <div class="swiper-slide relative w-full h-full">
-            <div class="absolute inset-0 z-0">
-              <img alt="Fresh Foods Cold Storage"
-                class="w-full h-full object-cover"
-                src="https://images.unsplash.com/photo-1595246140625-573b715d1128?auto=format&fit=crop&w=1920&q=80" />
-              <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/60 to-transparent"></div>
-              <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent"></div>
-            </div>
-            <div class="relative z-10 h-full flex items-center px-4 md:px-10 lg:px-20">
-              <div class="max-w-7xl mx-auto w-full pt-16">
-                <div class="max-w-3xl flex flex-col gap-8">
-                  <div class="flex items-center gap-4">
-                    <div class="h-px w-12 bg-blue-400"></div>
-                    <span class="text-blue-100 text-sm font-bold uppercase tracking-[0.2em]">Cold Storage</span>
-                  </div>
-                  <h1 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-lg">
-                    Advanced <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">Thermal</span> <br />
-                    Protection.
-                  </h1>
-                  <p class="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-xl border-l-2 border-blue-500 pl-6">
-                    Maintains critical temperatures as low as -20°C with minimal energy loss, ensuring food safety.
-                  </p>
-                  <div class="flex flex-col sm:flex-row gap-5 mt-4">
-                    <button class="h-14 px-8 rounded bg-white text-navy text-base font-bold hover:bg-gray-100 transition shadow-lg hover:shadow-white/20 flex items-center justify-center gap-2 group/btn">
-                      Learn More
-                      <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Slide 4 -->
-          <div class="swiper-slide relative w-full h-full">
-            <div class="absolute inset-0 z-0">
-              <img alt="Tech Park Modular Office"
-                class="w-full h-full object-cover"
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80" />
-              <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/60 to-transparent"></div>
-              <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent"></div>
-            </div>
-            <div class="relative z-10 h-full flex items-center px-4 md:px-10 lg:px-20">
-              <div class="max-w-7xl mx-auto w-full pt-16">
-                <div class="max-w-3xl flex flex-col gap-8">
-                  <div class="flex items-center gap-4">
-                    <div class="h-px w-12 bg-blue-400"></div>
-                    <span class="text-blue-100 text-sm font-bold uppercase tracking-[0.2em]">Modern Offices</span>
-                  </div>
-                  <h1 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-lg">
-                    Rapid <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">Modular</span> <br />
-                    Construction.
-                  </h1>
-                  <p class="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-xl border-l-2 border-blue-500 pl-6">
-                    Acoustic insulation meet modern aesthetics for rapid-deployment office spaces.
-                  </p>
-                  <div class="flex flex-col sm:flex-row gap-5 mt-4">
-                    <button class="h-14 px-8 rounded bg-white text-navy text-base font-bold hover:bg-gray-100 transition shadow-lg hover:shadow-white/20 flex items-center justify-center gap-2 group/btn">
-                      Get A Quote
-                      <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Slide 5 -->
-          <div class="swiper-slide relative w-full h-full">
-            <div class="absolute inset-0 z-0">
-              <img alt="Sustainable Future"
-                class="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCepGKrZXncudUgUCdLcbn7yldY_3xNmDZYTcd8_X8S4Utje4RjvusQvvZhi3180Q0QuktjIh6l1AJByDynDPmoTTzSB7WsEQ3YQ-xoJ3EL5MfGGMLH6uXVCb1tkeaOGRvAokPMbgBfvYi8NhUZJaASVKAYbVsEgAjoVbfTQVP-5sceO7YqpGZCrInrxyOMpmGS8k-UCKPAtHl_Xv2CDS6JYBIg7gVAIlm2MZOaRCeeGUPkpZqb5yRjCcfirt-wfP1gS6_LoGgSr4WT" />
-              <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/60 to-transparent"></div>
-              <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent"></div>
-            </div>
-            <div class="relative z-10 h-full flex items-center px-4 md:px-10 lg:px-20">
-              <div class="max-w-7xl mx-auto w-full pt-16">
-                <div class="max-w-3xl flex flex-col gap-8">
-                  <div class="flex items-center gap-4">
-                    <div class="h-px w-12 bg-blue-400"></div>
-                    <span class="text-blue-100 text-sm font-bold uppercase tracking-[0.2em]">Sustainability</span>
-                  </div>
-                  <h1 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-lg">
-                    Building a <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">Greener</span> <br />
-                    Future.
-                  </h1>
-                  <p class="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-xl border-l-2 border-blue-500 pl-6">
-                    Eco-friendly materials and energy-efficient designs that minimize your carbon footprint.
-                  </p>
-                  <div class="flex flex-col sm:flex-row gap-5 mt-4">
-                    <button class="h-14 px-8 rounded bg-white text-navy text-base font-bold hover:bg-gray-100 transition shadow-lg hover:shadow-white/20 flex items-center justify-center gap-2 group/btn">
-                      Contact Us
-                      <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="absolute bottom-0 left-0 right-0 z-20 border-t border-white/10 bg-black/20 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-4 md:px-10 lg:px-20 py-6 flex flex-wrap gap-12 text-white/80">
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-3xl text-blue-400">shield</span>
-            <div class="flex flex-col">
-              <span class="font-bold text-white text-lg">25 Year</span>
-              <span class="text-xs uppercase tracking-wide">Warranty</span>
-            </div>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-3xl text-blue-400">energy_savings_leaf</span>
-            <div class="flex flex-col">
-              <span class="font-bold text-white text-lg">A++ Rated</span>
-              <span class="text-xs uppercase tracking-wide">Energy Efficiency</span>
-            </div>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-3xl text-blue-400">engineering</span>
-            <div class="flex flex-col">
-              <span class="font-bold text-white text-lg">ISO 9001</span>
-              <span class="text-xs uppercase tracking-wide">Certified</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <section class="py-16 md:py-24 px-4 md:px-10 lg:px-20 bg-off-white"
-      id="projects">
-      <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
-          <div>
-            <span class="text-blue-600 font-bold uppercase tracking-wider text-sm mb-2 block">Our Portfolio</span>
-            <h2 class="text-navy text-4xl md:text-5xl font-bold leading-tight">Featured Projects</h2>
-          </div>
-
-        </div>
-        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 mb-20 lg:mb-32 group">
-          <div class="w-full lg:w-1/2 relative">
-            <div class="relative overflow-hidden rounded-sm shadow-2xl group-hover:shadow-3xl transition-shadow duration-500">
-              <div class="aspect-[4/3]">
-                <img alt="Global Logistics Hub"
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM5iCHDWMRVwLF9aXqErA-ef7F1foz-50-zBTLSkXt6JV1Ggjzpeu5cAs8_YJwzc0GOGUhwRYWOwr9Jo3RxJUpY1pd_rXpnC2IZXiQRLHsT5ll0z7tnwmcFrG8GR9KmAySdMKUO7UgDOUZ5byQYrKITiqDw1CS075DATs1FufrC1Y_PeM7a7zRb3rClSRpoR698NzI9cUzD_Bgq0VGpEIlHJ-3PSGiSozafNysOa5RKyu7ohIRM6BTsnZPRqhOWkPtL1cdEjV7wfKf" />
-              </div>
-              <div class="absolute inset-0 bg-navy/10 group-hover:bg-transparent transition-colors duration-500"></div>
-            </div>
-            <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-light-gray -z-10 rounded-sm"></div>
-            <div class="absolute -top-6 -left-6 w-24 h-24 border border-gray-200 -z-10 rounded-sm"></div>
-          </div>
-          <div class="w-full lg:w-1/2 flex flex-col justify-center">
-            <div class="flex items-center gap-4 mb-4">
-              <span class="bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded uppercase tracking-wide border border-blue-100">Logistics</span>
-              <span class="text-gray-400 text-sm font-medium">Completed 2023</span>
-            </div>
-            <h3 class="text-navy text-3xl md:text-4xl font-bold mb-6 leading-tight">Global Logistics Distribution Hub</h3>
-            <p class="text-charcoal text-lg leading-relaxed mb-8 opacity-90">
-              A massive scale distribution center featuring 120mm PUFF panels for optimal temperature regulation. This facility handles over 500 trucks daily and required specialized fire-retardant
-              paneling throughout the 500,000 sqft structure.
-            </p>
-            <div class="grid grid-cols-2 gap-y-4 gap-x-8 mb-10 border-l-2 border-gray-200 pl-6">
-              <div>
-                <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Location</span>
-                <span class="text-navy font-semibold">Dallas, Texas</span>
-              </div>
-              <div>
-                <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Size</span>
-                <span class="text-navy font-semibold">500,000 sqft</span>
-              </div>
-              <div>
-                <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Panel Type</span>
-                <span class="text-navy font-semibold">120mm PUR</span>
-              </div>
-              <div>
-                <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Duration</span>
-                <span class="text-navy font-semibold">8 Months</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-24 mb-20 lg:mb-32 group">
-          <div class="w-full lg:w-1/2 relative">
-            <div class="relative overflow-hidden rounded-sm shadow-2xl group-hover:shadow-3xl transition-shadow duration-500">
-              <div class="aspect-[4/3]">
-                <img alt="Fresh Foods Cold Storage"
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=800&q=80" />
-              </div>
-              <div class="absolute inset-0 bg-navy/10 group-hover:bg-transparent transition-colors duration-500"></div>
-            </div>
-            <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-light-gray -z-10 rounded-sm"></div>
-            <div class="absolute -top-6 -right-6 w-24 h-24 border border-gray-200 -z-10 rounded-sm"></div>
-          </div>
-          <div class="w-full lg:w-1/2 flex flex-col justify-center lg:items-end lg:text-right">
-            <div class="flex items-center gap-4 mb-4">
-              <span class="bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded uppercase tracking-wide border border-blue-100">Cold Chain</span>
-              <span class="text-gray-400 text-sm font-medium">Completed 2024</span>
-            </div>
-            <h3 class="text-navy text-3xl md:text-4xl font-bold mb-6 leading-tight">Fresh Foods Cold Storage Facility</h3>
-            <p class="text-charcoal text-lg leading-relaxed mb-8 opacity-90 lg:pl-12">
-              State-of-the-art refrigeration facility utilizing our premium thermal lock technology. Designed to maintain critical temperatures as low as -20°C with minimal energy loss, ensuring food
-              safety and operational efficiency.
-            </p>
-            <div class="grid grid-cols-2 gap-y-4 gap-x-8 mb-10 border-r-2 lg:border-l-0 lg:border-r-2 border-gray-200 pr-6 lg:pr-6 lg:pl-0 text-right"
-              dir="rtl">
-              <div class="text-left lg:text-right">
-                <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Location</span>
-                <span class="text-navy font-semibold">Seattle, WA</span>
-              </div>
-              <div class="text-left lg:text-right">
-                <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Temp Range</span>
-                <span class="text-navy font-semibold">-20°C to 4°C</span>
-              </div>
-              <div class="text-left lg:text-right">
-                <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Panel Type</span>
-                <span class="text-navy font-semibold">150mm PIR</span>
-              </div>
-              <div class="text-left lg:text-right">
-                <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Energy Rating</span>
-                <span class="text-navy font-semibold">A++ Efficiency</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 group">
-          <div class="w-full lg:w-1/2 relative">
-            <div class="relative overflow-hidden rounded-sm shadow-2xl group-hover:shadow-3xl transition-shadow duration-500">
-              <div class="aspect-[4/3]">
-                <img alt="Tech Park Modular Office"
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGbFTjcCJ7xm4-OnL3anCBzDfRDDI1eMAxvBSLSDGKSOmRWMd5pez2_ZpbqFJGFhZotlKSszT1GUUNOmo1L7EzAfKJYHm1ErXF5A4f4ZauUlKIUs86d5EJblrI0uKyvnMfz3a5ZAiIO4SEOW0SO6Vm1XiIgYNpI9Wx9-j9CMGi91uaKGOQ14u5UT3UBDYHK_8EC3P6BAIxBWxpj77xkP8Jh6VMum-krkD3KQ_-RgzPgme7gre_Yr2BBepae5iJXSQvoTYcL2lLV4Bh" />
-              </div>
-              <div class="absolute inset-0 bg-navy/10 group-hover:bg-transparent transition-colors duration-500"></div>
-            </div>
-            <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-light-gray -z-10 rounded-sm"></div>
-            <div class="absolute -top-6 -left-6 w-24 h-24 border border-gray-200 -z-10 rounded-sm"></div>
-          </div>
-          <div class="w-full lg:w-1/2 flex flex-col justify-center">
-            <div class="flex items-center gap-4 mb-4">
-              <span class="bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded uppercase tracking-wide border border-blue-100">Commercial</span>
-              <span class="text-gray-400 text-sm font-medium">Completed 2023</span>
-            </div>
-            <h3 class="text-navy text-3xl md:text-4xl font-bold mb-6 leading-tight">Tech Park Modular Offices</h3>
-            <p class="text-charcoal text-lg leading-relaxed mb-8 opacity-90">
-              Modern, rapid-deployment office spaces with high acoustic insulation properties. This project showcased our architectural panel series, combining sleek aesthetics with industrial-grade
-              durability for a 50-unit complex.
-            </p>
-            <div class="grid grid-cols-2 gap-y-4 gap-x-8 mb-10 border-l-2 border-gray-200 pl-6">
-              <div>
-                <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Location</span>
-                <span class="text-navy font-semibold">Austin, Texas</span>
-              </div>
-              <div>
-                <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Units</span>
-                <span class="text-navy font-semibold">50 Modules</span>
-              </div>
-              <div>
-                <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Acoustics</span>
-                <span class="text-navy font-semibold">STC 45 Rated</span>
-              </div>
-              <div>
-                <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Speed</span>
-                <span class="text-navy font-semibold">6 Weeks</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="mt-20 text-center md:hidden">
-          <button class="bg-white border border-navy text-navy font-bold py-3 px-8 rounded shadow hover:bg-navy hover:text-white transition">View All Projects</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-16 md:py-24 px-4 md:px-10 lg:px-20 bg-gray-50"
-      id="gallery">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="text-navy text-4xl font-bold mb-4">Construction Gallery</h2>
-          <p class="text-gray-600 max-w-2xl mx-auto mb-8">Browse our diverse portfolio of industrial and commercial implementations.</p>
-        </div>
-        <div class="masonry-grid">
-          <div class="masonry-item rounded overflow-hidden group relative">
-            <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuCepGKrZXncudUgUCdLcbn7yldY_3xNmDZYTcd8_X8S4Utje4RjvusQvvZhi3180Q0QuktjIh6l1AJByDynDPmoTTzSB7WsEQ3YQ-xoJ3EL5MfGGMLH6uXVCb1tkeaOGRvAokPMbgBfvYi8NhUZJaASVKAYbVsEgAjoVbfTQVP-5sceO7YqpGZCrInrxyOMpmGS8k-UCKPAtHl_Xv2CDS6JYBIg7gVAIlm2MZOaRCeeGUPkpZqb5yRjCcfirt-wfP1gS6_LoGgSr4WT" data-gallery="gallery" class="glightbox">
-              <img alt="Gallery 1"
-                class="w-full object-cover transition duration-500 group-hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCepGKrZXncudUgUCdLcbn7yldY_3xNmDZYTcd8_X8S4Utje4RjvusQvvZhi3180Q0QuktjIh6l1AJByDynDPmoTTzSB7WsEQ3YQ-xoJ3EL5MfGGMLH6uXVCb1tkeaOGRvAokPMbgBfvYi8NhUZJaASVKAYbVsEgAjoVbfTQVP-5sceO7YqpGZCrInrxyOMpmGS8k-UCKPAtHl_Xv2CDS6JYBIg7gVAIlm2MZOaRCeeGUPkpZqb5yRjCcfirt-wfP1gS6_LoGgSr4WT" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
-              </div>
-            </a>
-          </div>
-          <div class="masonry-item rounded overflow-hidden group relative">
-            <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuDqll6fGHrys5oWLxMinBVQF9GV2mssoikr-DDVROTr_DJlC1toI4Q4iQU5MHDO59wE-Zo9LJW7r21SEf8sw7j4mbTiEboNbH68naoPboW1ym21nZuXnu-8D5V5SxLjyRVENNcq1kAkUeujFE14YKXdyP5KQ81aUglMJJjTpjGelSxqCzTeYwGNrZ5EW0tt9joxBd-K3_Mh7Pu6rh7gBkTJf34TkVil-Iu8295XNkWDYIhKcMQP2bYUwmOvHX4Tu1bPSY00afEV4tW2" data-gallery="gallery" class="glightbox">
-              <img alt="Gallery 2"
-                class="w-full h-[400px] object-cover transition duration-500 group-hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqll6fGHrys5oWLxMinBVQF9GV2mssoikr-DDVROTr_DJlC1toI4Q4iQU5MHDO59wE-Zo9LJW7r21SEf8sw7j4mbTiEboNbH68naoPboW1ym21nZuXnu-8D5V5SxLjyRVENNcq1kAkUeujFE14YKXdyP5KQ81aUglMJJjTpjGelSxqCzTeYwGNrZ5EW0tt9joxBd-K3_Mh7Pu6rh7gBkTJf34TkVil-Iu8295XNkWDYIhKcMQP2bYUwmOvHX4Tu1bPSY00afEV4tW2" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
-              </div>
-            </a>
-          </div>
-          <div class="masonry-item rounded overflow-hidden group relative">
-            <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuCGbFTjcCJ7xm4-OnL3anCBzDfRDDI1eMAxvBSLSDGKSOmRWMd5pez2_ZpbqFJGFhZotlKSszT1GUUNOmo1L7EzAfKJYHm1ErXF5A4f4ZauUlKIUs86d5EJblrI0uKyvnMfz3a5ZAiIO4SEOW0SO6Vm1XiIgYNpI9Wx9-j9CMGi91uaKGOQ14u5UT3UBDYHK_8EC3P6BAIxBWxpj77xkP8Jh6VMum-krkD3KQ_-RgzPgme7gre_Yr2BBepae5iJXSQvoTYcL2lLV4Bh" data-gallery="gallery" class="glightbox">
-              <img alt="Gallery 3"
-                class="w-full object-cover transition duration-500 group-hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGbFTjcCJ7xm4-OnL3anCBzDfRDDI1eMAxvBSLSDGKSOmRWMd5pez2_ZpbqFJGFhZotlKSszT1GUUNOmo1L7EzAfKJYHm1ErXF5A4f4ZauUlKIUs86d5EJblrI0uKyvnMfz3a5ZAiIO4SEOW0SO6Vm1XiIgYNpI9Wx9-j9CMGi91uaKGOQ14u5UT3UBDYHK_8EC3P6BAIxBWxpj77xkP8Jh6VMum-krkD3KQ_-RgzPgme7gre_Yr2BBepae5iJXSQvoTYcL2lLV4Bh" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
-              </div>
-            </a>
-          </div>
-          <div class="masonry-item rounded overflow-hidden group relative">
-            <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuCepGKrZXncudUgUCdLcbn7yldY_3xNmDZYTcd8_X8S4Utje4RjvusQvvZhi3180Q0QuktjIh6l1AJByDynDPmoTTzSB7WsEQ3YQ-xoJ3EL5MfGGMLH6uXVCb1tkeaOGRvAokPMbgBfvYi8NhUZJaASVKAYbVsEgAjoVbfTQVP-5sceO7YqpGZCrInrxyOMpmGS8k-UCKPAtHl_Xv2CDS6JYBIg7gVAIlm2MZOaRCeeGUPkpZqb5yRjCcfirt-wfP1gS6_LoGgSr4WT" data-gallery="gallery" class="glightbox">
-              <img alt="Gallery 1"
-                class="w-full object-cover transition duration-500 group-hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCepGKrZXncudUgUCdLcbn7yldY_3xNmDZYTcd8_X8S4Utje4RjvusQvvZhi3180Q0QuktjIh6l1AJByDynDPmoTTzSB7WsEQ3YQ-xoJ3EL5MfGGMLH6uXVCb1tkeaOGRvAokPMbgBfvYi8NhUZJaASVKAYbVsEgAjoVbfTQVP-5sceO7YqpGZCrInrxyOMpmGS8k-UCKPAtHl_Xv2CDS6JYBIg7gVAIlm2MZOaRCeeGUPkpZqb5yRjCcfirt-wfP1gS6_LoGgSr4WT" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
-              </div>
-            </a>
-          </div>
-          <div class="masonry-item rounded overflow-hidden group relative">
-            <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuDqll6fGHrys5oWLxMinBVQF9GV2mssoikr-DDVROTr_DJlC1toI4Q4iQU5MHDO59wE-Zo9LJW7r21SEf8sw7j4mbTiEboNbH68naoPboW1ym21nZuXnu-8D5V5SxLjyRVENNcq1kAkUeujFE14YKXdyP5KQ81aUglMJJjTpjGelSxqCzTeYwGNrZ5EW0tt9joxBd-K3_Mh7Pu6rh7gBkTJf34TkVil-Iu8295XNkWDYIhKcMQP2bYUwmOvHX4Tu1bPSY00afEV4tW2" data-gallery="gallery" class="glightbox">
-              <img alt="Gallery 2"
-                class="w-full h-[400px] object-cover transition duration-500 group-hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqll6fGHrys5oWLxMinBVQF9GV2mssoikr-DDVROTr_DJlC1toI4Q4iQU5MHDO59wE-Zo9LJW7r21SEf8sw7j4mbTiEboNbH68naoPboW1ym21nZuXnu-8D5V5SxLjyRVENNcq1kAkUeujFE14YKXdyP5KQ81aUglMJJjTpjGelSxqCzTeYwGNrZ5EW0tt9joxBd-K3_Mh7Pu6rh7gBkTJf34TkVil-Iu8295XNkWDYIhKcMQP2bYUwmOvHX4Tu1bPSY00afEV4tW2" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
-              </div>
-            </a>
-          </div>
-          <div class="masonry-item rounded overflow-hidden group relative">
-            <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuCGbFTjcCJ7xm4-OnL3anCBzDfRDDI1eMAxvBSLSDGKSOmRWMd5pez2_ZpbqFJGFhZotlKSszT1GUUNOmo1L7EzAfKJYHm1ErXF5A4f4ZauUlKIUs86d5EJblrI0uKyvnMfz3a5ZAiIO4SEOW0SO6Vm1XiIgYNpI9Wx9-j9CMGi91uaKGOQ14u5UT3UBDYHK_8EC3P6BAIxBWxpj77xkP8Jh6VMum-krkD3KQ_-RgzPgme7gre_Yr2BBepae5iJXSQvoTYcL2lLV4Bh" data-gallery="gallery" class="glightbox">
-              <img alt="Gallery 3"
-                class="w-full object-cover transition duration-500 group-hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGbFTjcCJ7xm4-OnL3anCBzDfRDDI1eMAxvBSLSDGKSOmRWMd5pez2_ZpbqFJGFhZotlKSszT1GUUNOmo1L7EzAfKJYHm1ErXF5A4f4ZauUlKIUs86d5EJblrI0uKyvnMfz3a5ZAiIO4SEOW0SO6Vm1XiIgYNpI9Wx9-j9CMGi91uaKGOQ14u5UT3UBDYHK_8EC3P6BAIxBWxpj77xkP8Jh6VMum-krkD3KQ_-RgzPgme7gre_Yr2BBepae5iJXSQvoTYcL2lLV4Bh" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="text-center mt-8">
-          <button class="text-navy font-bold border-b border-navy pb-1 hover:text-blue-600 transition">Load More Projects</button>
-        </div>
-      </div>
-    </section>
-    <section class="py-16 md:py-24 px-4 md:px-10 lg:px-20 bg-white">
-      <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col lg:flex-row gap-16 items-center">
-          <div class="lg:w-1/3">
-            <span class="text-blue-600 font-bold uppercase tracking-wider text-sm mb-2 block">Our Expertise</span>
-            <h2 class="text-navy text-4xl font-bold leading-tight mb-6">Why Industry Leaders Choose PUFF Panels</h2>
-            <p class="text-gray-600 text-lg leading-relaxed mb-8">
-              We don't just supply panels; we deliver structural integrity, thermal efficiency, and design innovation tailored to your specific industrial requirements.
-            </p>
-            <ul class="space-y-4 mb-8">
-              <li class="flex items-center gap-3 text-navy font-medium">
-                <span class="material-symbols-outlined text-blue-500">check_circle</span> Superior Thermal Resistance (R-Value)
-              </li>
-              <li class="flex items-center gap-3 text-navy font-medium">
-                <span class="material-symbols-outlined text-blue-500">check_circle</span> Fire Retardant &amp; Safe Materials
-              </li>
-              <li class="flex items-center gap-3 text-navy font-medium">
-                <span class="material-symbols-outlined text-blue-500">check_circle</span> 50% Faster Construction Time
-              </li>
-            </ul>
-            <button class="text-navy font-bold border-b border-navy pb-0.5 hover:text-blue-600 hover:border-blue-600 transition">Learn about our Tech</button>
-          </div>
-          <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="p-8 rounded bg-gray-50 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <div class="size-14 rounded bg-navy text-white flex items-center justify-center mb-6 shadow-md">
-                <span class="material-symbols-outlined text-3xl">thermostat</span>
-              </div>
-              <h3 class="text-xl font-bold text-navy mb-3">Precision Insulation</h3>
-              <p class="text-gray-500 text-sm leading-relaxed">Advanced polyurethane foam core ensures minimal thermal bridging, reducing HVAC costs by up to 30%.</p>
-            </div>
-            <div class="p-8 rounded bg-gray-50 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <div class="size-14 rounded bg-navy text-white flex items-center justify-center mb-6 shadow-md">
-                <span class="material-symbols-outlined text-3xl">build</span>
-              </div>
-              <h3 class="text-xl font-bold text-navy mb-3">Modular Assembly</h3>
-              <p class="text-gray-500 text-sm leading-relaxed">Tongue-and-groove joinery allows for rapid, airtight installation, cutting project timelines in half.</p>
-            </div>
-            <div class="p-8 rounded bg-gray-50 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <div class="size-14 rounded bg-navy text-white flex items-center justify-center mb-6 shadow-md">
-                <span class="material-symbols-outlined text-3xl">shield_moon</span>
-              </div>
-              <h3 class="text-xl font-bold text-navy mb-3">Industrial Durability</h3>
-              <p class="text-gray-500 text-sm leading-relaxed">Corrosion-resistant steel facings designed to withstand harsh weather and chemical exposure.</p>
-            </div>
-            <div class="p-8 rounded bg-gray-50 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <div class="size-14 rounded bg-navy text-white flex items-center justify-center mb-6 shadow-md">
-                <span class="material-symbols-outlined text-3xl">recycling</span>
-              </div>
-              <h3 class="text-xl font-bold text-navy mb-3">Eco-Sustainable</h3>
-              <p class="text-gray-500 text-sm leading-relaxed">100% recyclable materials and zero-ODP foam blowing agents for a greener footprint.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="py-16 md:py-24 px-4 md:px-10 lg:px-20 bg-white"
-      id="process">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <span class="text-blue-600 font-bold uppercase tracking-wider text-sm mb-2 block">Our Methodology</span>
-          <h2 class="text-navy text-4xl font-bold">Seamless Execution Process</h2>
-        </div>
-        <div class="relative">
-          <div class="hidden lg:block absolute top-12 left-0 right-0 h-0.5 bg-gray-200 z-0"></div>
-          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 relative z-10">
-            <div class="group text-center">
-              <div class="size-24 mx-auto bg-white border-2 border-gray-200 group-hover:border-navy rounded-full flex items-center justify-center mb-6 transition-colors shadow-sm">
-                <span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-navy transition-colors">stylus_note</span>
-              </div>
-              <h3 class="text-lg font-bold text-navy mb-2">1. Consultation</h3>
-              <p class="text-sm text-gray-500">We analyze your site and requirements.</p>
-            </div>
-            <div class="group text-center">
-              <div class="size-24 mx-auto bg-white border-2 border-gray-200 group-hover:border-navy rounded-full flex items-center justify-center mb-6 transition-colors shadow-sm">
-                <span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-navy transition-colors">architecture</span>
-              </div>
-              <h3 class="text-lg font-bold text-navy mb-2">2. Design</h3>
-              <p class="text-sm text-gray-500">Custom panel engineering and layout planning.</p>
-            </div>
-            <div class="group text-center">
-              <div class="size-24 mx-auto bg-white border-2 border-gray-200 group-hover:border-navy rounded-full flex items-center justify-center mb-6 transition-colors shadow-sm">
-                <span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-navy transition-colors">factory</span>
-              </div>
-              <h3 class="text-lg font-bold text-navy mb-2">3. Fabrication</h3>
-              <p class="text-sm text-gray-500">Precision manufacturing in our facility.</p>
-            </div>
-            <div class="group text-center">
-              <div class="size-24 mx-auto bg-white border-2 border-gray-200 group-hover:border-navy rounded-full flex items-center justify-center mb-6 transition-colors shadow-sm">
-                <span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-navy transition-colors">local_shipping</span>
-              </div>
-              <h3 class="text-lg font-bold text-navy mb-2">4. Logistics</h3>
-              <p class="text-sm text-gray-500">Safe and timely delivery to your site.</p>
-            </div>
-            <div class="group text-center">
-              <div class="size-24 mx-auto bg-navy border-2 border-navy rounded-full flex items-center justify-center mb-6 shadow-lg shadow-blue-900/20">
-                <span class="material-symbols-outlined text-4xl text-white">check</span>
-              </div>
-              <h3 class="text-lg font-bold text-navy mb-2">5. Installation</h3>
-              <p class="text-sm text-gray-500">Expert assembly and final handover.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="py-16 md:py-24 px-4 md:px-10 lg:px-20 bg-navy relative overflow-hidden">
-      <div class="absolute inset-0 opacity-5 pointer-events-none"
-        style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
-      <div class="max-w-7xl mx-auto relative z-10">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-          <div>
-            <span class="text-blue-400 font-bold uppercase tracking-wider text-sm mb-2 block">Client Trust</span>
-            <h2 class="text-white text-4xl font-bold">Hear From Our Partners</h2>
-          </div>
-          <div class="flex gap-2">
-            <button class="size-10 rounded-full border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-navy transition"><span
-                class="material-symbols-outlined">arrow_back</span></button>
-            <button class="size-10 rounded-full bg-white text-navy flex items-center justify-center hover:bg-gray-200 transition"><span class="material-symbols-outlined">arrow_forward</span></button>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-[#1f3152] p-8 rounded border border-white/5 shadow-2xl relative">
-            <span class="material-symbols-outlined text-6xl text-white/5 absolute top-4 right-4">format_quote</span>
-            <div class="flex gap-1 text-amber-400 mb-6">
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-            </div>
-            <p class="text-gray-300 italic mb-8 leading-relaxed">"The PUFF Panels team demonstrated exceptional professionalism. The warehouse was completed two weeks ahead of schedule, significantly
-              aiding our logistics rollout."</p>
-            <div class="flex items-center gap-4 pt-6 border-t border-white/10">
-              <div class="size-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">JD</div>
-              <div>
-                <h4 class="text-white font-bold">John Davis</h4>
-                <p class="text-blue-200 text-xs uppercase tracking-wider">Project Mgr, ABC Corp</p>
-              </div>
-            </div>
-          </div>
-          <div class="bg-[#1f3152] p-8 rounded border border-white/5 shadow-2xl relative">
-            <span class="material-symbols-outlined text-6xl text-white/5 absolute top-4 right-4">format_quote</span>
-            <div class="flex gap-1 text-amber-400 mb-6">
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-            </div>
-            <p class="text-gray-300 italic mb-8 leading-relaxed">"We saw a 30% drop in energy costs within the first quarter. The thermal efficiency of these panels is exactly as advertised. Highly
-              recommended."</p>
-            <div class="flex items-center gap-4 pt-6 border-t border-white/10">
-              <div class="size-12 rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">SM</div>
-              <div>
-                <h4 class="text-white font-bold">Sarah Miller</h4>
-                <p class="text-blue-200 text-xs uppercase tracking-wider">Director, FreshFoods</p>
-              </div>
-            </div>
-          </div>
-          <div class="bg-[#1f3152] p-8 rounded border border-white/5 shadow-2xl relative hidden lg:block">
-            <span class="material-symbols-outlined text-6xl text-white/5 absolute top-4 right-4">format_quote</span>
-            <div class="flex gap-1 text-amber-400 mb-6">
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-              <span class="material-symbols-outlined fill-current text-sm">star</span>
-            </div>
-            <p class="text-gray-300 italic mb-8 leading-relaxed">"Robust materials that withstand our industrial environment perfectly. The aesthetics are also a major upgrade from traditional
-              cladding."</p>
-            <div class="flex items-center gap-4 pt-6 border-t border-white/10">
-              <div class="size-12 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">MK</div>
-              <div>
-                <h4 class="text-white font-bold">Mike K.</h4>
-                <p class="text-blue-200 text-xs uppercase tracking-wider">Site Supervisor</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="py-16 md:py-24 px-4 md:px-10 lg:px-20 bg-off-white">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="text-center text-navy text-3xl font-bold mb-12">Frequently Asked Questions</h2>
-        <div class="flex flex-col gap-4">
-          <details class="group bg-white rounded border border-gray-200 open:border-navy transition-all duration-300"
-            open="">
-            <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-              <span class="font-bold text-navy text-lg">What is the expected lifespan of your panels?</span>
-              <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400 group-open:text-navy">expand_more</span>
-            </summary>
-            <div class="px-6 pb-6 pt-0 text-gray-600 leading-relaxed border-t border-transparent group-open:border-gray-100 animate-fade-in">
-              <div class="pt-4">Our premium PUFF panels are engineered for longevity, typically lasting over 25 years with minimal maintenance due to high-grade steel facings and corrosion-resistant
-                coatings.</div>
-            </div>
-          </details>
-          <details class="group bg-white rounded border border-gray-200 open:border-navy transition-all duration-300">
-            <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-              <span class="font-bold text-navy text-lg">Do you provide custom sizing?</span>
-              <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400 group-open:text-navy">expand_more</span>
-            </summary>
-            <div class="px-6 pb-6 pt-0 text-gray-600 leading-relaxed border-t border-transparent group-open:border-gray-100">
-              <div class="pt-4">Yes, manufacturing is fully customizable. We produce panels to exact length specifications required for your project to minimize waste and ensure a perfect fit.</div>
-            </div>
-          </details>
-          <details class="group bg-white rounded border border-gray-200 open:border-navy transition-all duration-300">
-            <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-              <span class="font-bold text-navy text-lg">Is installation included?</span>
-              <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400 group-open:text-navy">expand_more</span>
-            </summary>
-            <div class="px-6 pb-6 pt-0 text-gray-600 leading-relaxed border-t border-transparent group-open:border-gray-100">
-              <div class="pt-4">We offer end-to-end solutions. You can choose supply-only or opt for our turnkey service where our certified teams handle the complete installation process.</div>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-    <section class="py-20 px-4 md:px-10 lg:px-20 bg-navy text-white text-center relative overflow-hidden">
-      <div class="absolute top-0 left-0 size-64 bg-blue-500 rounded-full blur-[120px] opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
-      <div class="absolute bottom-0 right-0 size-64 bg-indigo-500 rounded-full blur-[120px] opacity-20 translate-x-1/2 translate-y-1/2"></div>
-      <div class="max-w-4xl mx-auto relative z-10">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Build the Future?</h2>
-        <p class="text-xl text-blue-100 mb-10 font-light">Get a comprehensive quote for your industrial project today. Fast turnaround, premium quality.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <button class="px-10 py-4 bg-white text-navy font-bold rounded shadow-lg hover:bg-gray-100 transition transform hover:-translate-y-1">Request Quote</button>
-          <button class="px-10 py-4 border border-white/30 text-white font-bold rounded hover:bg-white/10 transition">Download Brochure</button>
-        </div>
-      </div>
-    </section>
-    <footer class="bg-charcoal text-white pt-20 pb-10 border-t border-white/5"
-      id="contact">
-      <div class="px-4 md:px-10 lg:px-20">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          <div>
-            <div class="flex items-center gap-3 mb-6">
-              <span class="material-symbols-outlined text-3xl text-blue-400">grid_view</span>
-              <h2 class="text-xl font-bold tracking-tight">PUFF<span class="font-light">PANELS</span></h2>
-            </div>
-            <p class="text-white text-sm leading-relaxed mb-6">
-              Redefining industrial construction with advanced panel technology. Durable, efficient, and aesthetically superior.
-            </p>
-            <div class="flex gap-4">
-              <a class="size-8 rounded bg-white/5 hover:bg-blue-500 flex items-center justify-center transition-colors"
-                href="#"><i class="text-xs">FB</i></a>
-              <a class="size-8 rounded bg-white/5 hover:bg-blue-500 flex items-center justify-center transition-colors"
-                href="#"><i class="text-xs">IG</i></a>
-              <a class="size-8 rounded bg-white/5 hover:bg-blue-500 flex items-center justify-center transition-colors"
-                href="#"><i class="text-xs">LN</i></a>
-            </div>
-          </div>
-          <div>
-            <h3 class="font-bold text-lg mb-6 text-white">Company</h3>
-            <ul class="space-y-3 text-sm text-white">
-              <li><a class="hover:text-blue-400 transition"
-                  href="#">About Us</a></li>
-              <li><a class="hover:text-blue-400 transition"
-                  href="#">Careers</a></li>
-              <li><a class="hover:text-blue-400 transition"
-                  href="#">Our Partners</a></li>
-              <li><a class="hover:text-blue-400 transition"
-                  href="#">News &amp; Blog</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-bold text-lg mb-6 text-white">Services</h3>
-            <ul class="space-y-3 text-sm text-white">
-              <li><a class="hover:text-blue-400 transition"
-                  href="#">Cold Storage Construction</a></li>
-              <li><a class="hover:text-blue-400 transition"
-                  href="#">Industrial Warehousing</a></li>
-              <li><a class="hover:text-blue-400 transition"
-                  href="#">Prefab Offices</a></li>
-              <li><a class="hover:text-blue-400 transition"
-                  href="#">Roofing Solutions</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-bold text-lg mb-6 text-white">Contact</h3>
-            <ul class="space-y-4 text-sm text-white">
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-blue-400 text-lg mt-0.5">location_on</span>
-                <span>123 Industrial Park Dr,<br />Suite 400, NY 10001</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-blue-400 text-lg">call</span>
-                <span>+1-234-567-890</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-blue-400 text-lg">mail</span>
-                <span>info@puffpanels.com</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white">
-          <p>© 2024 PUFF Panels Construction. All rights reserved.</p>
-          <div class="flex gap-6">
-            <a class="hover:text-white transition"
-              href="#">Privacy Policy</a>
-            <a class="hover:text-white transition"
-              href="#">Terms of Service</a>
-            <a class="hover:text-white transition"
-              href="#">Sitemap</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <a aria-label="Chat on WhatsApp"
-      class="fixed bottom-6 right-6 z-50 flex items-center justify-center size-14 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-110 hover:bg-[#20bd5a] transition-all duration-300 group shadow-green-900/20"
-      href="#">
-      <svg class="w-8 h-8 fill-current"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
-        </path>
-      </svg>
-      <span class="absolute right-full mr-4 bg-navy text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap shadow-sm">Talk to an expert</span>
-    </a>
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col">
-      <div class="flex items-center justify-between p-4 border-b border-gray-100">
-        <div class="flex items-center gap-3">
-           <div class="size-10 bg-navy text-white flex items-center justify-center rounded-sm shadow-md">
+  </div>
+  <header
+    class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
+    <div class="px-4 md:px-10 lg:px-20">
+      <div class="max-w-7xl mx-auto flex h-20 items-center justify-between">
+        <a class="flex items-center gap-3 group" href="#">
+          <div
+            class="size-10 bg-navy text-white flex items-center justify-center rounded-sm shadow-md group-hover:bg-charcoal transition-colors">
             <span class="material-symbols-outlined text-2xl">grid_view</span>
           </div>
-          <span class="text-xl font-bold text-navy">PUFF<span class="font-light">PANELS</span></span>
-        </div>
-        <button id="close-menu-btn" class="text-navy hover:bg-gray-100 rounded-full p-2 transition">
-          <span class="material-symbols-outlined text-3xl">close</span>
-        </button>
-      </div>
-      <nav class="flex-1 overflow-y-auto py-8 px-6 flex flex-col gap-6">
-        <a class="text-xl font-bold text-navy hover:text-blue-600 transition-colors border-b border-gray-100 pb-2 mobile-link" href="#">Home</a>
-        <a class="text-xl font-medium text-gray-600 hover:text-navy transition-colors border-b border-gray-100 pb-2 mobile-link" href="#projects">Projects</a>
-        <a class="text-xl font-medium text-gray-600 hover:text-navy transition-colors border-b border-gray-100 pb-2 mobile-link" href="#process">Process</a>
-        <a class="text-xl font-medium text-gray-600 hover:text-navy transition-colors border-b border-gray-100 pb-2 mobile-link" href="#gallery">Gallery</a>
-        <a class="text-xl font-medium text-gray-600 hover:text-navy transition-colors border-b border-gray-100 pb-2 mobile-link" href="#contact">Contact</a>
-        <div class="mt-4 flex flex-col gap-4">
-           <span class="text-navy font-bold text-lg tracking-wide">+1 (800) 123-4567</span>
-           <button class="bg-navy hover:bg-charcoal text-white text-lg font-semibold py-4 px-6 rounded shadow-lg transition w-full text-center">
+          <div class="flex flex-col">
+            <h2 class="text-xl font-bold tracking-tight text-navy leading-none">PUFF<span
+                class="font-light">PANELS</span></h2>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-charcoal font-semibold">Construction</span>
+          </div>
+        </a>
+        <div class="hidden lg:flex items-center gap-10">
+          <nav class="flex items-center gap-8">
+            <a class="text-sm font-bold text-navy hover:text-blue-600 transition-colors" href="#">Home</a>
+            <a class="text-sm font-medium text-gray-600 hover:text-navy transition-colors" href="#projects">Projects</a>
+            <a class="text-sm font-medium text-gray-600 hover:text-navy transition-colors" href="#gallery">Gallery</a>
+            <a class="text-sm font-medium text-gray-600 hover:text-navy transition-colors" href="#contact">Contact</a>
+          </nav>
+          <div class="h-6 w-px bg-gray-200"></div>
+          <div class="flex items-center gap-4">
+            <span class="text-navy font-bold text-sm tracking-wide">+91 98969 16650</span>
+            <button onclick="openModal()"
+              class="bg-navy hover:bg-charcoal text-white text-sm font-semibold py-2.5 px-6 rounded shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
               Get Quote
             </button>
+          </div>
         </div>
-      </nav>
+        <button id="mobile-menu-btn" class="lg:hidden text-navy">
+          <span class="material-symbols-outlined text-3xl">menu_open</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="relative w-full h-[85vh] min-h-[600px] overflow-hidden bg-navy group" id="hero_section">
+    <div class="swiper mySwiper h-full w-full">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide relative w-full h-full">
+          <div class="absolute inset-0 z-0">
+            <img alt="PUF Panel Industrial Warehouse Sanand Gujarat" class="w-full h-full object-cover"
+              src="./assets/images/File-1.png" />
+            <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/60 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent"></div>
+          </div>
+
+          <div class="relative z-10 h-full flex items-center px-4 md:px-10 lg:px-20">
+            <div class="max-w-7xl mx-auto w-full">
+              <div class="max-w-3xl flex flex-col gap-8">
+
+                <h1
+                  class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-lg">
+                  40,000 Sq. Ft. <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">
+                    PUF Panel Warehouse</span>
+                  <br />
+                  Sanand, Gujarat
+                </h1>
+
+                <p
+                  class="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-xl border-l-2 border-blue-500 pl-6">
+                  Modern industrial warehouse built for an automotive components manufacturer in Sanand Industrial Zone.
+                  Made with 100mm PUF insulated panels, it offers strong insulation, dust protection, and was completed
+                  in just 45 days for efficient manufacturing and storage.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-5 mt-4">
+                  <a href="tel:9896916650"
+                    class="h-14 px-8 rounded bg-white text-navy text-base font-bold hover:bg-gray-100 transition shadow-lg hover:shadow-white/20 flex items-center justify-center gap-2 group/btn">
+                    Call Now : 9896916650
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide relative w-full h-full">
+          <div class="absolute inset-0 z-0">
+            <img alt="Logistics Distribution Hub Bhiwandi Maharashtra" class="w-full h-full object-cover"
+              src="./assets/images/File-2.png" />
+            <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/60 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent"></div>
+          </div>
+
+          <div class="relative z-10 h-full flex items-center px-4 md:px-10 lg:px-20">
+            <div class="max-w-7xl mx-auto w-full">
+              <div class="max-w-3xl flex flex-col gap-8">
+
+                <h1
+                  class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-lg">
+                  Large Scale <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">
+                    Distribution Hub</span>
+                  <br />
+                  Bhiwandi, Maharashtra
+                </h1>
+
+                <p
+                  class="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-xl border-l-2 border-blue-500 pl-6">
+                  A 75,000 sq. ft. logistics and distribution center built with 120mm PUF insulated panels. Located in
+                  Bhiwandi near Mumbai.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-5 mt-4">
+                  <a href="tel:9896916650"
+                    class="h-14 px-8 rounded bg-white text-navy text-base font-bold hover:bg-gray-100 transition shadow-lg hover:shadow-white/20 flex items-center justify-center gap-2 group/btn">
+                    Call Now : 9896916650
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide relative w-full h-full">
+          <div class="absolute inset-0 z-0">
+            <img alt="Cold Storage Facility Ludhiana Punjab" class="w-full h-full object-cover"
+              src="./assets/images/File-3.png" />
+            <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/60 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent"></div>
+          </div>
+
+          <div class="relative z-10 h-full flex items-center px-4 md:px-10 lg:px-20">
+            <div class="max-w-7xl mx-auto w-full">
+              <div class="max-w-3xl flex flex-col gap-8">
+
+                <h1
+                  class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-lg">
+                  Advanced <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">
+                    Food Cold Storage</span>
+                  <br />
+                  Ludhiana, Punjab
+                </h1>
+
+                <p
+                  class="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-xl border-l-2 border-blue-500 pl-6">
+                  High-efficiency cold storage for fruits and vegetables. Built with 150mm PUF insulated panels,
+                  maintaining temperatures from -18°C to +4°C to keep food fresh while saving energy.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-5 mt-4">
+                  <a href="tel:9896916650"
+                    class="h-14 px-8 rounded bg-white text-navy text-base font-bold hover:bg-gray-100 transition shadow-lg hover:shadow-white/20 flex items-center justify-center gap-2 group/btn">
+                    Call Now : 9896916650
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
-        speed: 1000,
-        effect: "fade",
-        fadeEffect: {
-          crossFade: true
-        },
-      });
 
-      const lightbox = GLightbox({
-        selector: '.glightbox',
-        touchNavigation: true,
-        loop: true,
-        autoplayVideos: true
-      });
+    <div class="absolute bottom-0 left-0 right-0 z-20 border-t border-white/10 bg-black/20 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-4 md:px-10 lg:px-20 py-6 flex flex-wrap gap-12 text-white/80">
 
-      // Mobile Menu Logic
-      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-      const closeMenuBtn = document.getElementById('close-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const mobileLinks = document.querySelectorAll('.mobile-link');
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-3xl text-blue-400">shield</span>
+          <div class="flex flex-col">
+            <span class="font-bold text-white text-lg">25+ Years</span>
+            <span class="text-xs uppercase tracking-wide">Structural Durability</span>
+          </div>
+        </div>
 
-      function toggleMenu() {
-        const isHidden = mobileMenu.classList.contains('translate-x-full');
-        if (isHidden) {
-          mobileMenu.classList.remove('translate-x-full');
-          document.body.classList.add('overflow-hidden'); // Prevent background scrolling
-        } else {
-          mobileMenu.classList.add('translate-x-full');
-          document.body.classList.remove('overflow-hidden');
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-3xl text-blue-400">energy_savings_leaf</span>
+          <div class="flex flex-col">
+            <span class="font-bold text-white text-lg">Up to 60%</span>
+            <span class="text-xs uppercase tracking-wide">Energy Savings</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-3xl text-blue-400">engineering</span>
+          <div class="flex flex-col">
+            <span class="font-bold text-white text-lg">ISO 9001</span>
+            <span class="text-xs uppercase tracking-wide">Certified Manufacturing</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Services Section -->
+  <section class="py-16 md:py-24 px-4 md:px-10 lg:px-20 bg-gray-50 relative overflow-hidden" id="services">
+    <!-- Decorative background elements -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-blue-100 rounded-full blur-3xl -z-10 opacity-50"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-50 rounded-full blur-3xl -z-10 opacity-70"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="mb-16 flex flex-col items-center text-center">
+        <span
+          class="text-blue-600 font-bold uppercase tracking-wider text-sm mb-3 block px-4 py-1.5 bg-blue-100/50 rounded-full border border-blue-200">Our
+          Expertise</span>
+        <h2 class="text-navy text-4xl md:text-5xl font-extrabold leading-tight mb-4">Our company provides these
+          services.</h2>
+        <p class="text-gray-600 text-lg max-w-2xl">
+          We specialize in a wide range of premium PUF panel building solutions designed for durability, speed, and
+          exceptional thermal insulation.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+
+        <!-- Service 1 -->
+        <div
+          class="group p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
+          <div
+            class="size-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+            <span class="material-symbols-outlined text-3xl">warehouse</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-navy mb-3 group-hover:text-blue-700 transition-colors">Warehouse
+            Construction</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Industrial warehouses for storage, logistics, and manufacturing units.
+          </p>
+        </div>
+
+        <!-- Service 2 -->
+        <div
+          class="group p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
+          <div
+            class="size-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+            <span class="material-symbols-outlined text-3xl">storefront</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-navy mb-3 group-hover:text-blue-700 transition-colors">Showroom
+            Construction</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Modern showrooms for automobile, furniture, and retail businesses.
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div
+          class="group p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
+          <div
+            class="size-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+            <span class="material-symbols-outlined text-3xl">domain</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-navy mb-3 group-hover:text-blue-700 transition-colors">Office Buildings
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Prefabricated office spaces, site offices, and commercial offices.
+          </p>
+        </div>
+
+        <!-- Service 4 -->
+        <div
+          class="group p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
+          <div
+            class="size-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+            <span class="material-symbols-outlined text-3xl">store</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-navy mb-3 group-hover:text-blue-700 transition-colors">Retail Shop
+            Construction</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Small and medium shop structures for markets and commercial areas.
+          </p>
+        </div>
+
+        <!-- Service 5 -->
+        <div
+          class="group p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
+          <div
+            class="size-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+            <span class="material-symbols-outlined text-3xl">factory</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-navy mb-3 group-hover:text-blue-700 transition-colors">Factory /
+            Industrial Shed</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Strong industrial buildings for production and manufacturing units.
+          </p>
+        </div>
+
+        <!-- Service 6 -->
+        <div
+          class="group p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
+          <div
+            class="size-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+            <span class="material-symbols-outlined text-3xl">ac_unit</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-navy mb-3 group-hover:text-blue-700 transition-colors">Cold Storage
+            Buildings</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Insulated buildings suitable for food storage and temperature control.
+          </p>
+        </div>
+
+        <!-- Service 7 -->
+        <div
+          class="group p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
+          <div
+            class="size-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+            <span class="material-symbols-outlined text-3xl">cabin</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-navy mb-3 group-hover:text-blue-700 transition-colors">Site Office /
+            Portable Cabin</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Temporary offices used at construction sites and project locations.
+          </p>
+        </div>
+
+        <!-- Service 8 -->
+        <div
+          class="group p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
+          <div
+            class="size-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+            <span class="material-symbols-outlined text-3xl">cottage</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-navy mb-3 group-hover:text-blue-700 transition-colors">Farm House /
+            Resort Rooms</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Modern rooms and cottages built quickly using PUF panels.
+          </p>
+        </div>
+
+        <!-- Service 9 -->
+        <div
+          class="group p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
+          <div
+            class="size-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+            <span class="material-symbols-outlined text-3xl">bed</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-navy mb-3 group-hover:text-blue-700 transition-colors">Worker
+            Accommodation</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Housing structures for workers and staff.
+          </p>
+        </div>
+
+        <!-- Service 10 -->
+        <div
+          class="group p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
+          <div
+            class="size-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+            <span class="material-symbols-outlined text-3xl">inventory_2</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-navy mb-3 group-hover:text-blue-700 transition-colors">Godown / Storage
+            Buildings</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Storage spaces for goods, materials, and logistics companies.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 px-4 md:px-10 lg:px-20 bg-off-white" id="projects">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
+        <div>
+          <span class="text-blue-600 font-bold uppercase tracking-wider text-sm mb-2 block">Our Portfolio</span>
+          <h2 class="text-navy text-4xl md:text-5xl font-bold leading-tight">Team Recent Projects</h2>
+        </div>
+
+      </div>
+
+      <!-- SECTION 01 -->
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 mb-24 lg:mb-32 group">
+
+        <!-- IMAGE SIDE -->
+        <div class="w-full lg:w-1/2 relative">
+
+          <!-- Gradient glow background -->
+          <div class="absolute -top-10 -left-10 w-56 h-56 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
+
+          <!-- Floating shape -->
+          <div
+            class="absolute -top-6 -left-6 w-16 h-16 bg-white shadow-lg rounded-xl rotate-12 transition-all duration-700 group-hover:-translate-y-2">
+          </div>
+
+          <!-- Image card -->
+          <div
+            class="relative overflow-hidden rounded-2xl shadow-2xl transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-3xl">
+
+            <img alt="Global Logistics Hub"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              src="./assets/images/File-3.png" />
+
+            <div class="absolute inset-0 bg-navy/10 group-hover:bg-transparent transition-colors duration-500"></div>
+          </div>
+
+          <!-- Decorative bottom shape -->
+          <div
+            class="absolute -bottom-8 -right-8 w-24 h-24 bg-blue-50 rounded-2xl rotate-12 shadow-md transition-all duration-700 group-hover:translate-y-2">
+          </div>
+
+        </div>
+
+
+
+        <!-- CONTENT SIDE -->
+        <div class="w-full lg:w-1/2 flex flex-col justify-center">
+
+          <div class="flex items-center gap-4 mb-4">
+            <span
+              class="bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded uppercase tracking-wide border border-blue-100">
+              Logistics
+            </span>
+
+            <span class="text-gray-400 text-sm font-medium">
+              Completed 2023
+            </span>
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-navy text-4xl md:text-5xl font-extrabold mb-3 leading-tight">
+            Global Logistics Distribution Hub
+          </h3>
+
+          <!-- Hand drawn wave -->
+          <svg width="140" height="12" viewBox="0 0 140 12" fill="none" class="mb-6">
+            <path d="M2 6C20 0 40 12 60 6C80 0 100 12 120 6C130 3 138 6 138 6" stroke="#2563eb" stroke-width="3"
+              stroke-linecap="round" />
+          </svg>
+
+          <p class="text-charcoal text-lg leading-relaxed mb-8 opacity-90">
+            A large distribution facility built using insulated PUFF panels designed for temperature control and
+            efficient logistics operations.
+            The building supports heavy truck movement and high-volume storage.
+          </p>
+
+          <!-- Details grid -->
+          <div class="grid grid-cols-2 gap-y-5 gap-x-10 border-l-2 border-gray-200 pl-6">
+
+            <div>
+              <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Location</span>
+              <span class="text-navy font-semibold text-lg">Dallas, Texas</span>
+            </div>
+
+            <div>
+              <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Size</span>
+              <span class="text-navy font-semibold text-lg">500,000 sqft</span>
+            </div>
+
+            <div>
+              <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Panel Type</span>
+              <span class="text-navy font-semibold text-lg">120mm PUR</span>
+            </div>
+
+            <div>
+              <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Duration</span>
+              <span class="text-navy font-semibold text-lg">8 Months</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- SECTION 02 -->
+      <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-24 mb-24 lg:mb-32 group">
+
+        <!-- IMAGE SIDE -->
+        <div class="w-full lg:w-1/2 relative">
+
+          <!-- gradient glow -->
+          <div class="absolute -top-10 -right-10 w-56 h-56 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
+
+          <!-- floating shape -->
+          <div
+            class="absolute -top-6 -right-6 w-16 h-16 bg-white shadow-lg rounded-xl rotate-12 transition-all duration-700 group-hover:-translate-y-2">
+          </div>
+
+          <!-- image card -->
+          <div
+            class="relative overflow-hidden rounded-2xl shadow-2xl transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-3xl">
+
+            <img alt="Fresh Foods Cold Storage"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              src="./assets/images/Gallery22.jpeg" />
+
+            <div class="absolute inset-0 bg-navy/10 group-hover:bg-transparent transition-colors duration-500"></div>
+
+          </div>
+
+          <!-- bottom decoration -->
+          <div
+            class="absolute -bottom-8 -left-8 w-24 h-24 bg-blue-50 rounded-2xl rotate-12 shadow-md transition-all duration-700 group-hover:translate-y-2">
+          </div>
+
+        </div>
+
+
+        <!-- CONTENT SIDE -->
+        <div class="w-full lg:w-1/2 flex flex-col justify-center lg:items-end lg:text-right">
+
+          <div class="flex items-center gap-4 mb-4">
+            <span
+              class="bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded uppercase tracking-wide border border-blue-100">
+              Cold Chain
+            </span>
+
+            <span class="text-gray-400 text-sm font-medium">
+              Completed 2024
+            </span>
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-navy text-4xl md:text-5xl font-extrabold mb-3 leading-tight">
+            Fresh Foods Cold Storage Facility
+          </h3>
+
+          <!-- hand drawn wave -->
+          <svg width="140" height="12" viewBox="0 0 140 12" fill="none" class="mb-6">
+            <path d="M2 6C20 0 40 12 60 6C80 0 100 12 120 6C130 3 138 6 138 6" stroke="#2563eb" stroke-width="3"
+              stroke-linecap="round" />
+          </svg>
+
+          <p class="text-charcoal text-lg leading-relaxed mb-8 opacity-90 lg:pl-12">
+            A modern cold storage facility designed for safe food storage using insulated PUFF panels.
+            The structure maintains stable temperature conditions and improves energy efficiency
+            for long-term cold chain operations.
+          </p>
+
+
+          <!-- Details -->
+          <div class="grid grid-cols-2 gap-y-5 gap-x-10 border-r-2 border-gray-200 pr-6 text-right">
+
+            <div>
+              <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">
+                Location
+              </span>
+              <span class="text-navy font-semibold text-lg">
+                Seattle, WA
+              </span>
+            </div>
+
+            <div>
+              <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">
+                Temp Range
+              </span>
+              <span class="text-navy font-semibold text-lg">
+                -20°C to 4°C
+              </span>
+            </div>
+
+            <div>
+              <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">
+                Panel Type
+              </span>
+              <span class="text-navy font-semibold text-lg">
+                150mm PIR
+              </span>
+            </div>
+
+            <div>
+              <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">
+                Energy Rating
+              </span>
+              <span class="text-navy font-semibold text-lg">
+                A++ Efficiency
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- SECTION 03 -->
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 mb-24 lg:mb-32 group">
+
+        <!-- IMAGE SIDE -->
+        <div class="w-full lg:w-1/2 relative">
+
+          <!-- gradient glow -->
+          <div class="absolute -top-10 -left-10 w-56 h-56 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
+
+          <!-- floating shape -->
+          <div
+            class="absolute -top-6 -left-6 w-16 h-16 bg-white shadow-lg rounded-xl rotate-12 transition-all duration-700 group-hover:-translate-y-2">
+          </div>
+
+          <!-- image card -->
+          <div
+            class="relative overflow-hidden rounded-2xl shadow-2xl transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-3xl">
+
+            <img alt="Tech Park Modular Office"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              src="./assets/images/Gallery14.jpeg" />
+
+            <div class="absolute inset-0 bg-navy/10 group-hover:bg-transparent transition-colors duration-500"></div>
+
+          </div>
+
+          <!-- bottom decorative shape -->
+          <div
+            class="absolute -bottom-8 -right-8 w-24 h-24 bg-blue-50 rounded-2xl rotate-12 shadow-md transition-all duration-700 group-hover:translate-y-2">
+          </div>
+
+        </div>
+
+
+
+        <!-- CONTENT SIDE -->
+        <div class="w-full lg:w-1/2 flex flex-col justify-center">
+
+          <div class="flex items-center gap-4 mb-4">
+            <span
+              class="bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded uppercase tracking-wide border border-blue-100">
+              Commercial
+            </span>
+
+            <span class="text-gray-400 text-sm font-medium">
+              Completed 2023
+            </span>
+          </div>
+
+          <!-- title -->
+          <h3 class="text-navy text-4xl md:text-5xl font-extrabold mb-3 leading-tight">
+            Tech Park Modular Offices
+          </h3>
+
+          <!-- hand drawn underline -->
+          <svg width="140" height="12" viewBox="0 0 140 12" fill="none" class="mb-6">
+            <path d="M2 6C20 0 40 12 60 6C80 0 100 12 120 6C130 3 138 6 138 6" stroke="#2563eb" stroke-width="3"
+              stroke-linecap="round" />
+          </svg>
+
+          <p class="text-charcoal text-lg leading-relaxed mb-8 opacity-90">
+            Modern modular office spaces built using insulated PUFF panels for fast installation and long-lasting
+            durability.
+            This project created a professional workspace environment while maintaining energy efficiency and structural
+            strength.
+          </p>
+
+          <!-- details -->
+          <div class="grid grid-cols-2 gap-y-5 gap-x-10 border-l-2 border-gray-200 pl-6">
+
+            <div>
+              <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Location</span>
+              <span class="text-navy font-semibold text-lg">Austin, Texas</span>
+            </div>
+
+            <div>
+              <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Units</span>
+              <span class="text-navy font-semibold text-lg">50 Modules</span>
+            </div>
+
+            <div>
+              <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Acoustics</span>
+              <span class="text-navy font-semibold text-lg">STC 45 Rated</span>
+            </div>
+
+            <div>
+              <span class="block text-xs uppercase text-gray-500 font-bold tracking-wider mb-1">Speed</span>
+              <span class="text-navy font-semibold text-lg">6 Weeks</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="mt-20 text-center md:hidden">
+        <button
+          class="bg-white border border-navy text-navy font-bold py-3 px-8 rounded shadow hover:bg-navy hover:text-white transition">View
+          All Projects</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 px-4 md:px-10 lg:px-20 bg-gray-50" id="gallery">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-navy text-4xl font-bold mb-4">Project Gallery</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-8">Browse our diverse portfolio of industrial and commercial
+          implementations.</p>
+      </div>
+      <div class="masonry-grid">
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery1.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 1" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery1.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery2.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 2" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery2.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery3.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 3" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery3.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery4.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 4" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery4.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery5.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 5" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery5.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery6.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 6" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery6.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery7.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 7" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery7.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery8.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 8" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery8.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery9.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 9" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery9.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery10.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 10" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery10.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery11.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 11" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery11.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery12.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 12" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery12.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery13.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 13" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery13.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery14.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 14" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery14.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery15.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 15" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery15.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery16.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 16" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery16.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery17.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 17" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery17.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery18.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 18" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery18.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery19.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 19" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery19.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery20.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 20" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery20.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+        <div class="masonry-item rounded overflow-hidden group relative">
+          <a href="assets/images/Gallery21.jpeg" data-type="image" data-gallery="gallery" class="glightbox">
+            <img alt="Gallery Image 21" class="w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy" src="assets/images/Gallery21.jpeg" />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 px-4 md:px-10 lg:px-20 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col lg:flex-row gap-16 items-center">
+
+        <div class="lg:w-1/3">
+          <span class="text-blue-600 font-bold uppercase tracking-wider text-sm mb-2 block">Our Work</span>
+
+          <h2 class="text-navy text-4xl font-bold leading-tight mb-6">
+            Why Clients Choose Our PUF Panel Building Service
+          </h2>
+
+          <p class="text-gray-600 text-lg leading-relaxed mb-8">
+            We help businesses and property owners build warehouses, showrooms, offices, shops, and rooms using PUF
+            panels.
+            Our team focuses on quality work, fast construction, and reliable service so your building project is
+            completed smoothly.
+          </p>
+
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3 text-navy font-medium">
+              <span class="material-symbols-outlined text-blue-500">check_circle</span>
+              Quality construction work
+            </li>
+
+            <li class="flex items-center gap-3 text-navy font-medium">
+              <span class="material-symbols-outlined text-blue-500">check_circle</span>
+              Fast project completion
+            </li>
+
+            <li class="flex items-center gap-3 text-navy font-medium">
+              <span class="material-symbols-outlined text-blue-500">check_circle</span>
+              Experienced installation team
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <div
+            class="p-8 rounded bg-gray-50 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="size-14 rounded bg-navy text-white flex items-center justify-center mb-6 shadow-md">
+              <span class="material-symbols-outlined text-3xl">construction</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-navy mb-3">Strong & Durable Buildings</h3>
+
+            <p class="text-gray-500 text-sm leading-relaxed">
+              We build strong structures using quality materials and proper installation so the building lasts for many
+              years.
+            </p>
+          </div>
+
+
+          <div
+            class="p-8 rounded bg-gray-50 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="size-14 rounded bg-navy text-white flex items-center justify-center mb-6 shadow-md">
+              <span class="material-symbols-outlined text-3xl">schedule</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-navy mb-3">Fast Construction</h3>
+
+            <p class="text-gray-500 text-sm leading-relaxed">
+              PUF panel buildings can be completed faster than traditional construction, saving time for business
+              operations.
+            </p>
+          </div>
+
+
+          <div
+            class="p-8 rounded bg-gray-50 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="size-14 rounded bg-navy text-white flex items-center justify-center mb-6 shadow-md">
+              <span class="material-symbols-outlined text-3xl">engineering</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-navy mb-3">Experienced Team</h3>
+
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Our skilled team has experience building warehouses, offices, showrooms, and other structures using PUF
+              panels.
+            </p>
+          </div>
+
+
+          <div
+            class="p-8 rounded bg-gray-50 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="size-14 rounded bg-navy text-white flex items-center justify-center mb-6 shadow-md">
+              <span class="material-symbols-outlined text-3xl">payments</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-navy mb-3">Affordable Solution</h3>
+
+            <p class="text-gray-500 text-sm leading-relaxed">
+              PUF panel buildings are cost-effective and energy efficient, making them a practical choice for many
+              businesses.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-4 md:px-10 lg:px-20 bg-gray-50 relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-navy text-4xl md:text-5xl font-bold mb-4 tracking-tight">Hear From Our Clients</h2>
+        <p class="text-gray-500 text-lg md:text-xl font-medium">Trusted by businesses across India</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Testimonial 1 -->
+        <div
+          class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100 flex flex-col h-full">
+          <div class="flex items-center gap-4 mb-6">
+            <img src="./assets/images/Review-3.png" alt="Rohit Sharma"
+              class="size-14 rounded-full object-cover shadow-sm" />
+            <div>
+              <h4 class="text-navy font-bold text-lg leading-tight">Rohit Sharma</h4>
+              <p class="text-gray-400 text-sm font-medium">Warehouse Owner, Bhiwandi</p>
+            </div>
+          </div>
+
+          <div class="flex gap-1 text-amber-400 mb-4">
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+          </div>
+
+          <p class="text-gray-600 leading-relaxed flex-grow">
+            "We built our warehouse using PUF panels and the result is excellent. The construction was very fast and the
+            insulation quality is very good. Highly satisfied with their work."
+          </p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div
+          class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100 flex flex-col h-full">
+          <div class="flex items-center gap-4 mb-6">
+            <img src="./assets/images/Review-1.png" alt="Priya Gupta"
+              class="size-14 rounded-full object-cover shadow-sm" />
+            <div>
+              <h4 class="text-navy font-bold text-lg leading-tight">Priya Gupta</h4>
+              <p class="text-gray-400 text-sm font-medium">Cold Storage Owner, Punjab</p>
+            </div>
+          </div>
+
+          <div class="flex gap-1 text-amber-400 mb-4">
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+          </div>
+
+          <p class="text-gray-600 leading-relaxed flex-grow">
+            "Our cold storage project was completed on time. The PUF panel insulation keeps the temperature stable and
+            helps reduce electricity costs."
+          </p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div
+          class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100 flex flex-col h-full">
+          <div class="flex items-center gap-4 mb-6">
+            <img src="./assets/images/Review-4.png" alt="Amit Verma"
+              class="size-14 rounded-full object-cover shadow-sm" />
+            <div>
+              <h4 class="text-navy font-bold text-lg leading-tight">Amit Verma</h4>
+              <p class="text-gray-400 text-sm font-medium">Factory Owner, Gujarat</p>
+            </div>
+          </div>
+
+          <div class="flex gap-1 text-amber-400 mb-4">
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+          </div>
+
+          <p class="text-gray-600 leading-relaxed flex-grow">
+            "We constructed our factory shed with PUF panels. The building looks modern and the heat insulation works
+            really well in summer."
+          </p>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div
+          class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100 flex flex-col h-full">
+          <div class="flex items-center gap-4 mb-6">
+            <img src="./assets/images/Review-5.png" alt="Sandeep Singh"
+              class="size-14 rounded-full object-cover shadow-sm" />
+            <div>
+              <h4 class="text-navy font-bold text-lg leading-tight">Sandeep Singh</h4>
+              <p class="text-gray-400 text-sm font-medium">Logistics Manager, Delhi NCR</p>
+            </div>
+          </div>
+
+          <div class="flex gap-1 text-amber-400 mb-4">
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+          </div>
+
+          <p class="text-gray-600 leading-relaxed flex-grow">
+            "Their team delivered our logistics warehouse project quickly. The structure is strong, clean, and perfect
+            for storage operations."
+          </p>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div
+          class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100 flex flex-col h-full">
+          <div class="flex items-center gap-4 mb-6">
+            <img src="./assets/images/Review-2.png" alt="Neha Patel"
+              class="size-14 rounded-full object-cover shadow-sm" />
+            <div>
+              <h4 class="text-navy font-bold text-lg leading-tight">Neha Patel</h4>
+              <p class="text-gray-400 text-sm font-medium">Food Processing Unit, Ahmedabad</p>
+            </div>
+          </div>
+
+          <div class="flex gap-1 text-amber-400 mb-4">
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+          </div>
+
+          <p class="text-gray-600 leading-relaxed flex-grow">
+            "Very professional team. Our food processing building was completed smoothly and the insulation quality of
+            the panels is impressive."
+          </p>
+        </div>
+
+        <!-- Testimonial 6 -->
+        <div
+          class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100 flex flex-col h-full">
+          <div class="flex items-center gap-4 mb-6">
+            <img src="./assets/images/Review-6.png" alt="Rajesh Kumar"
+              class="size-14 rounded-full object-cover shadow-sm" />
+            <div>
+              <h4 class="text-navy font-bold text-lg leading-tight">Rajesh Kumar</h4>
+              <p class="text-gray-400 text-sm font-medium">Prefab House Owner, Haryana</p>
+            </div>
+          </div>
+
+          <div class="flex gap-1 text-amber-400 mb-4">
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+            <i class="fa-solid fa-star text-sm"></i>
+          </div>
+
+          <p class="text-gray-600 leading-relaxed flex-grow">
+            "We built our farmhouse using PUF panels and the construction was surprisingly fast. The house stays cool
+            even in summer."
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 px-4 md:px-10 lg:px-20 bg-off-white">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-center text-navy text-3xl font-bold mb-12">Frequently Asked Questions</h2>
+
+      <div class="flex flex-col gap-4 faq-container">
+
+        <details class="group bg-white rounded border border-gray-200 open:border-navy transition-all duration-300">
+          <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+            <span class="font-bold text-navy text-lg">What type of buildings can you make using PUF panels?</span>
+            <span
+              class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400 group-open:text-navy">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100">
+            We build warehouses, factories, showrooms, shops, offices, rooms, farm houses, site offices, and prefab
+            buildings using high-quality PUF panels.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded border border-gray-200 open:border-navy transition-all duration-300">
+          <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+            <span class="font-bold text-navy text-lg">Do you manufacture PUF panels?</span>
+            <span
+              class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400 group-open:text-navy">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100">
+            No, we do not manufacture panels. Our business focuses on designing and constructing buildings using PUF
+            panels with professional installation.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded border border-gray-200 open:border-navy transition-all duration-300">
+          <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+            <span class="font-bold text-navy text-lg">How long does it take to complete a PUF panel building?</span>
+            <span
+              class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400 group-open:text-navy">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100">
+            Construction is much faster than traditional buildings. Most projects like warehouses or offices can be
+            completed within a few weeks depending on size.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded border border-gray-200 open:border-navy transition-all duration-300">
+          <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+            <span class="font-bold text-navy text-lg">Are PUF panel buildings strong and durable?</span>
+            <span
+              class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400 group-open:text-navy">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100">
+            Yes. PUF panel structures are strong, weather resistant, and long lasting. They provide good insulation and
+            perform well in both summer and winter conditions.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded border border-gray-200 open:border-navy transition-all duration-300">
+          <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+            <span class="font-bold text-navy text-lg">Can you build custom size buildings?</span>
+            <span
+              class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400 group-open:text-navy">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100">
+            Yes, we design buildings based on your requirements. Whether you need a small shop or a large warehouse, we
+            can customize the size and layout.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded border border-gray-200 open:border-navy transition-all duration-300">
+          <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+            <span class="font-bold text-navy text-lg">Is a PUF panel building energy efficient?</span>
+            <span
+              class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400 group-open:text-navy">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100">
+            Yes. PUF panels provide excellent insulation which helps keep the building cool in summer and reduces
+            electricity usage.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded border border-gray-200 open:border-navy transition-all duration-300">
+          <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+            <span class="font-bold text-navy text-lg">Do you provide complete building construction?</span>
+            <span
+              class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400 group-open:text-navy">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100">
+            Yes, we provide complete solutions including structure design, PUF panel installation, roofing, and
+            finishing work.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded border border-gray-200 open:border-navy transition-all duration-300">
+          <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+            <span class="font-bold text-navy text-lg">Are PUF panel buildings suitable for offices and showrooms?</span>
+            <span
+              class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400 group-open:text-navy">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100">
+            Yes, many businesses use PUF panel buildings for offices, showrooms, and shops because they look modern and
+            can be built quickly.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded border border-gray-200 open:border-navy transition-all duration-300">
+          <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+            <span class="font-bold text-navy text-lg">Do you work across India?</span>
+            <span
+              class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400 group-open:text-navy">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100">
+            Yes, we take projects in different cities depending on project size and requirements.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded border border-gray-200 open:border-navy transition-all duration-300">
+          <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+            <span class="font-bold text-navy text-lg">How can I get a quotation for my project?</span>
+            <span
+              class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400 group-open:text-navy">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100">
+            You can contact us by phone or WhatsApp and share your project details like location, size, and type of
+            building. Our team will provide a quotation.
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Enquiry Section -->
+  <section class="py-16 md:py-24 px-4 md:px-10 lg:px-20 bg-white border-t border-gray-100" id="contact">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
+        <!-- Left Column: Contact Details -->
+        <div>
+          <span class="text-blue-600 font-bold uppercase tracking-wider text-sm mb-2 block">Get in Touch</span>
+          <h2 class="text-navy text-4xl font-bold mb-6">Let's Discuss Your Project</h2>
+          <p class="text-gray-600 text-lg mb-10 leading-relaxed">
+            We are here to help you with your next industrial project. Reach out to us for a consultation or quote.
+          </p>
+
+          <div class="space-y-8">
+            <div class="flex items-start gap-4">
+              <div class="size-12 rounded bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl">person</span>
+              </div>
+              <div>
+                <h4 class="text-navy font-bold text-lg">Contact Person</h4>
+                <p class="text-gray-600">Sandeep</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="size-12 rounded bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl">call</span>
+              </div>
+              <div>
+                <h4 class="text-navy font-bold text-lg">Phone</h4>
+                <p class="text-gray-600">+91 98969 16650</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="size-12 rounded bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl">mail</span>
+              </div>
+              <div>
+                <h4 class="text-navy font-bold text-lg">Email</h4>
+                <p class="text-gray-600">puftechinfrasolutions@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="size-12 rounded bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl">location_on</span>
+              </div>
+              <div>
+                <h4 class="text-navy font-bold text-lg">Location</h4>
+                <p class="text-gray-600">Haryana, India</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="size-12 rounded bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl">schedule</span>
+              </div>
+              <div>
+                <h4 class="text-navy font-bold text-lg">Office Hours</h4>
+                <p class="text-gray-600">Mon-Sat: 9:00 AM - 6:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Enquiry Form -->
+        <div class="bg-gray-50 rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100">
+          <h3 class="text-2xl font-bold text-navy mb-6">Send us a Message</h3>
+          <form class="flex flex-col gap-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-sm font-bold text-navy mb-2">Name</label>
+                <input type="text"
+                  class="w-full px-4 py-3 rounded bg-white border border-gray-200 focus:border-navy focus:ring-1 focus:ring-navy outline-none transition"
+                  placeholder="Your Name">
+              </div>
+              <div>
+                <label class="block text-sm font-bold text-navy mb-2">Phone</label>
+                <input type="tel"
+                  class="w-full px-4 py-3 rounded bg-white border border-gray-200 focus:border-navy focus:ring-1 focus:ring-navy outline-none transition"
+                  placeholder="Your Phone">
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-navy mb-2">Email</label>
+              <input type="email"
+                class="w-full px-4 py-3 rounded bg-white border border-gray-200 focus:border-navy focus:ring-1 focus:ring-navy outline-none transition"
+                placeholder="your@email.com">
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-navy mb-2">Message</label>
+              <textarea
+                class="w-full px-4 py-3 rounded bg-white border border-gray-200 focus:border-navy focus:ring-1 focus:ring-navy outline-none transition h-32 resize-none"
+                placeholder="How can we help you?"></textarea>
+            </div>
+            <button
+              class="w-full bg-navy hover:bg-charcoal text-white font-bold py-4 rounded transition shadow-lg mt-2">
+              Send Enquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="py-20 px-4 md:px-10 lg:px-20 bg-navy text-white text-center relative overflow-hidden">
+    <div
+      class="absolute top-0 left-0 size-64 bg-blue-500 rounded-full blur-[120px] opacity-20 -translate-x-1/2 -translate-y-1/2">
+    </div>
+    <div
+      class="absolute bottom-0 right-0 size-64 bg-indigo-500 rounded-full blur-[120px] opacity-20 translate-x-1/2 translate-y-1/2">
+    </div>
+    <div class="max-w-4xl mx-auto relative z-10">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Build the Future?</h2>
+      <p class="text-xl text-blue-100 mb-10 font-light">Get a comprehensive quote for your industrial project today.
+        Fast turnaround, premium quality.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button
+          class="px-10 py-4 bg-white text-navy font-bold rounded shadow-lg hover:bg-gray-100 transition transform hover:-translate-y-1">Request
+          Quote</button>
+        <button
+          class="px-10 py-4 border border-white/30 text-white font-bold rounded hover:bg-white/10 transition">Download
+          Brochure</button>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-charcoal text-white pt-20 pb-10 border-t border-white/5">
+    <div class="px-4 md:px-10 lg:px-20">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <span class="material-symbols-outlined text-3xl text-blue-400">grid_view</span>
+            <h2 class="text-xl font-bold tracking-tight">PUFF<span class="font-light">PANELS</span></h2>
+          </div>
+          <p class="text-white text-sm leading-relaxed mb-6">
+            India's leading specialist in designing and building high-performance PUF (Polyurethane Foam) panel
+            structures—homes, offices, shops, warehouses and cold storage buildings.
+          </p>
+          <div class="flex gap-4">
+            <a class="size-8 rounded bg-white/5 hover:bg-blue-500 flex items-center justify-center transition-colors"
+              href="#"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+            <a class="size-8 rounded bg-white/5 hover:bg-blue-500 flex items-center justify-center transition-colors"
+              href="#"><i class="fa-brands fa-instagram text-sm"></i></a>
+            <a class="size-8 rounded bg-white/5 hover:bg-blue-500 flex items-center justify-center transition-colors"
+              href="#"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+          </div>
+          <div class="mt-8">
+            <h4 class="text-white font-bold text-sm mb-3">Certifications</h4>
+            <ul class="text-gray-400 text-sm space-y-1">
+              <li class="flex items-center gap-2"><span
+                  class="material-symbols-outlined text-blue-400 text-xs">verified</span> ISO 9001:2015</li>
+              <li class="flex items-center gap-2"><span
+                  class="material-symbols-outlined text-blue-400 text-xs">verified</span> ISO 14001</li>
+              <li class="flex items-center gap-2"><span
+                  class="material-symbols-outlined text-blue-400 text-xs">verified</span> Fire Rated</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg mb-6 text-white">Company</h3>
+          <ul class="space-y-3 text-sm text-white">
+            <li><a class="hover:text-blue-400 transition" href="#">About Us</a></li>
+            <li><a class="hover:text-blue-400 transition" href="#">Careers</a></li>
+            <li><a class="hover:text-blue-400 transition" href="#">Our Partners</a></li>
+            <li><a class="hover:text-blue-400 transition" href="#">News &amp; Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg mb-6 text-white">Services</h3>
+          <ul class="space-y-3 text-sm text-white">
+            <li><a class="hover:text-blue-400 transition" href="#">Cold Storage Construction</a></li>
+            <li><a class="hover:text-blue-400 transition" href="#">Industrial Warehousing</a></li>
+            <li><a class="hover:text-blue-400 transition" href="#">Prefab Offices</a></li>
+            <li><a class="hover:text-blue-400 transition" href="#">Roofing Solutions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg mb-6 text-white">Contact</h3>
+          <ul class="space-y-4 text-sm text-white">
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-blue-400 text-lg">person</span>
+              <span>Sandeep</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-blue-400 text-lg mt-0.5">location_on</span>
+              <span>Haryana, India</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-blue-400 text-lg">call</span>
+              <span>+91 98969 16650</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-blue-400 text-lg">mail</span>
+              <span>puftechinfrasolutions@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white">
+        <p>© 2024 PUFF Panels Construction. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a class="hover:text-white transition" href="#">Privacy Policy</a>
+          <a class="hover:text-white transition" href="#">Terms of Service</a>
+          <a class="hover:text-white transition" href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a aria-label="Chat on WhatsApp"
+    class="fixed bottom-6 right-6 z-50 flex items-center justify-center size-14 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-110 hover:bg-[#20bd5a] transition-all duration-300 group shadow-green-900/20"
+    href="https://wa.me/919896916650" target="_blank" rel="noopener">
+
+    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
+      </path>
+    </svg>
+
+    <span
+      class="absolute right-full mr-4 bg-navy text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap shadow-sm">
+      Talk to an expert
+    </span>
+
+  </a>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu"
+    class="fixed inset-0 z-[60] bg-white transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col">
+    <div class="flex items-center justify-between p-4 border-b border-gray-100">
+      <div class="flex items-center gap-3">
+        <div class="size-10 bg-navy text-white flex items-center justify-center rounded-sm shadow-md">
+          <span class="material-symbols-outlined text-2xl">grid_view</span>
+        </div>
+        <span class="text-xl font-bold text-navy">PUFF<span class="font-light">PANELS</span></span>
+      </div>
+      <button id="close-menu-btn" class="text-navy hover:bg-gray-100 rounded-full p-2 transition">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+    </div>
+    <nav class="flex-1 overflow-y-auto py-8 px-6 flex flex-col gap-6">
+      <a class="text-xl font-bold text-navy hover:text-blue-600 transition-colors border-b border-gray-100 pb-2 mobile-link"
+        href="#">Home</a>
+      <a class="text-xl font-medium text-gray-600 hover:text-navy transition-colors border-b border-gray-100 pb-2 mobile-link"
+        href="#projects">Projects</a>
+      <a class="text-xl font-medium text-gray-600 hover:text-navy transition-colors border-b border-gray-100 pb-2 mobile-link"
+        href="#gallery">Gallery</a>
+      <a class="text-xl font-medium text-gray-600 hover:text-navy transition-colors border-b border-gray-100 pb-2 mobile-link"
+        href="#contact">Contact</a>
+      <div class="mt-4 flex flex-col gap-4">
+        <span class="text-navy font-bold text-lg tracking-wide">+91 98969 16650</span>
+        <button onclick="openModal()"
+          class="bg-navy hover:bg-charcoal text-white text-lg font-semibold py-4 px-6 rounded shadow-lg transition w-full text-center">
+          Get Quote
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Get Quote Modal -->
+  <div id="quote-modal" class="fixed inset-0 z-[70] hidden opacity-0 transition-opacity duration-300">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeModal()"></div>
+    <div
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-white rounded-lg shadow-2xl p-8 scale-95 transition-transform duration-300"
+      id="modal-content">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-2xl font-bold text-navy">Get in touch with us for expert PUF Panel assistance today.</h3>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-navy transition">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <form class="flex flex-col gap-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+          <input type="text"
+            class="w-full px-4 py-3 rounded border border-gray-300 focus:border-navy focus:ring-1 focus:ring-navy outline-none transition"
+            placeholder="" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+          <input type="email"
+            class="w-full px-4 py-3 rounded border border-gray-300 focus:border-navy focus:ring-1 focus:ring-navy outline-none transition"
+            placeholder="" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+          <input type="tel"
+            class="w-full px-4 py-3 rounded border border-gray-300 focus:border-navy focus:ring-1 focus:ring-navy outline-none transition"
+            placeholder="" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+          <textarea
+            class="w-full px-4 py-3 rounded border border-gray-300 focus:border-navy focus:ring-1 focus:ring-navy outline-none transition h-32 resize-none"
+            placeholder="Tell us about your project requirements..." required></textarea>
+        </div>
+        <button type="submit"
+          class="w-full bg-navy hover:bg-charcoal text-white font-bold py-3.5 rounded transition shadow-lg mt-2">Submit
+          Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const details = document.querySelectorAll(".faq-container details");
+
+    details.forEach((targetDetail) => {
+      targetDetail.addEventListener("toggle", () => {
+        if (targetDetail.open) {
+          details.forEach((detail) => {
+            if (detail !== targetDetail) {
+              detail.removeAttribute("open");
+            }
+          });
         }
-      }
-
-      mobileMenuBtn.addEventListener('click', toggleMenu);
-      closeMenuBtn.addEventListener('click', toggleMenu);
-
-      // Close menu when clicking a link
-      mobileLinks.forEach(link => {
-        link.addEventListener('click', toggleMenu);
       });
-    </script>
-  </body>
+    });
+  </script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      speed: 1000,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true
+      },
+    });
+
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      touchNavigation: true,
+      loop: true,
+      autoplayVideos: true
+    });
+
+    // Mobile Menu Logic
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function toggleMenu() {
+      const isHidden = mobileMenu.classList.contains('translate-x-full');
+      if (isHidden) {
+        mobileMenu.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden'); // Prevent background scrolling
+      } else {
+        mobileMenu.classList.add('translate-x-full');
+        document.body.classList.remove('overflow-hidden');
+      }
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+    closeMenuBtn.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking a link
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', toggleMenu);
+    });
+
+    // Modal Logic
+    const modal = document.getElementById('quote-modal');
+    const modalContent = document.getElementById('modal-content');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      // Small delay to allow display:block to apply before opacity transition
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modalContent.classList.remove('scale-95');
+        modalContent.classList.add('scale-100');
+      }, 10);
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeModal() {
+      modal.classList.add('opacity-0');
+      modalContent.classList.remove('scale-100');
+      modalContent.classList.add('scale-95');
+
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 300);
+      document.body.classList.remove('overflow-hidden');
+    }
+  </script>
+</body>
 
 </html>
